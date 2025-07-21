@@ -5,27 +5,23 @@ import { platform } from 'os';
 
 @Injectable()
 export class ScraperService {
-  constructor(private firebase: FirebaseService) {
-    this.getWebsite('https://www.phonixhealth.com/').then((content) => {
-      console.log(content);
-    });
-  }
+  constructor() {}
 
-  getWebsite(url: string) {
+  getWebsite(url: string): Promise<string | null> {
     return new Promise((resolve, reject) => {
+      if (!url.startsWith('https://')) {
+        url = 'https://' + url;
+      }
       const isLinux = platform() === 'linux';
 
-      const baseCmd = isLinux ? 'xvfb-run' : 'python3';
-      const args = isLinux
-        ? [
-            '--auto-servernum',
-            '--server-args=-screen 0 1920x1080x24',
-            'python3',
-            'scrape.py',
-            url,
-          ]
-        : ['scrape.py', url];
-
+      const baseCmd = 'xvfb-run';
+      const args = [
+        '--auto-servernum',
+        "--server-args='-screen 0 1920x1080x24'",
+        'python3',
+        'scrape.py',
+        url,
+      ];
       const subprocess = spawn(baseCmd, args, { shell: true });
 
       let stdout = '';
@@ -40,13 +36,11 @@ export class ScraperService {
       });
 
       subprocess.on('close', (code) => {
-        console.log('=== Command STDOUT ===');
-        console.log(stdout);
-        console.log('=== Command STDERR ===');
-        console.log(stderr);
-        console.log('=== Command Return Code ===');
-        console.log(code);
-
+        if (stderr) {
+          console.log('=== Command STDERR ===');
+          reject(stderr);
+          return;
+        }
         try {
           const json = JSON.parse(stdout);
           resolve(json.content);

@@ -9,7 +9,7 @@ const firebaseProvider = {
   useFactory: (configService: ConfigService) => {
     const firebaseConfig = {
       type: configService.get<string>('TYPE'),
-      project_id: configService.get<string>('PROJECT_ID'),
+      projectId: configService.get<string>('PROJECT_ID'),
       private_key_id: configService
         .get<string>('PRIVATE_KEY_ID')
         .replace(/\\n/g, '\n'),
@@ -24,10 +24,11 @@ const firebaseProvider = {
       client_x509_cert_url: configService.get<string>('CLIENT_CERT_URL'),
       universe_domain: configService.get<string>('UNIVERSAL_DOMAIN'),
     } as admin.ServiceAccount;
+    const databaseURL = `https://${firebaseConfig.projectId}.firebaseio.com`;
 
     return admin.initializeApp({
       credential: admin.credential.cert(firebaseConfig),
-      databaseURL: `https://${firebaseConfig.projectId}.firebaseio.com`,
+      databaseURL,
       storageBucket: `${firebaseConfig.projectId}.appspot.com`,
     });
   },
