@@ -11,7 +11,7 @@ export class FirebaseService {
     this.#collection = this.#db.collection('uncurated_websites');
     console.log('initialized');
 
-    this.listenToUncuratedChanges();
+    // this.listenToUncuratedChanges();
   }
   async getUncuratedWebsites(): Promise<any[]> {
     const doc = await this.#collection.doc('uncurated').get();
