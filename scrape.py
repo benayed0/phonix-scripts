@@ -1,5 +1,7 @@
 # scraper.py
+import sys
 import json
+import asyncio
 from playwright.async_api import async_playwright
 user_data_dir = "/home/ubuntu/chrome_profile"
 async def scrape(url):
@@ -52,3 +54,10 @@ async def scrape(url):
         print(json.dumps(result))
         
         
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python scraper.py <url>")
+        sys.exit(1)
+    url = sys.argv[1]
+    asyncio.run(scrape(url))
