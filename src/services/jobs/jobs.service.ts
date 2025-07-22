@@ -54,7 +54,7 @@ export class JobsService implements OnModuleInit {
     if (category === 'unknown') {
       const websiteContent = await this.scrapper.getWebsite(url);
       if (!websiteContent || websiteContent.trim() === '') {
-        console.warn(`❌ Skipping (no content): ${url}, adding to uncurated`);
+        console.warn(`❌ Skipping (no content): ${url}, adding to other`);
         category = 'other';
       } else {
         category = await this.llm.getWebsiteCategory(url, websiteContent);
