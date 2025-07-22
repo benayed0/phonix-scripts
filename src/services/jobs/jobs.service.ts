@@ -15,6 +15,8 @@ export class JobsService implements OnModuleInit {
     this.firebase.listenToUncuratedChanges(this.processWebsite.bind(this));
   }
   async processWebsite(url: string) {
+    console.log('processing', url);
+
     const category = await this.getWebsiteCategory(url);
     await this.appendWebsite(url, category);
   }
