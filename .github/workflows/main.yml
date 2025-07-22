@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: deploy # <-- This is crucial
+    environment: phonix-scripts # <-- This is crucial
 
     steps:
       - name: Checkout code
