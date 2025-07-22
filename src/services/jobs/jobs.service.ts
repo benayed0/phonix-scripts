@@ -15,8 +15,6 @@ export class JobsService implements OnModuleInit {
     this.firebase.listenToUncuratedChanges(this.processWebsite.bind(this));
   }
   async processWebsite(url: string) {
-    console.log('processing', url);
-
     const category = await this.getWebsiteCategory(url);
     await this.appendWebsite(url, category);
   }
@@ -49,6 +47,8 @@ export class JobsService implements OnModuleInit {
     console.log(`📦 [Updated] "${url}" added to category "${category}".\n`);
   }
   async getWebsiteCategory(url: string) {
+    console.log('processing ', url);
+
     let category = await this.llm.getDomainCategory(url);
 
     if (category === 'unknown') {

@@ -38,7 +38,8 @@ export class ScraperService {
       subprocess.on('close', (code) => {
         if (stderr) {
           console.log('=== Command STDERR ===');
-          reject(stderr);
+          console.log(stderr);
+          resolve(undefined);
           return;
         }
         try {
