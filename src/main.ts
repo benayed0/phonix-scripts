@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: { origin: '*' },
   });
-  await app.listen(3002, '0.0.0.0');
+  await app.listen(3000, '0.0.0.0');
   app.use('/assets', express.static(join(__dirname, '..', 'assets')));
 
   process.on('SIGTERM', async () => {
