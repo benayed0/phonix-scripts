@@ -13,6 +13,7 @@ export class I18nController {
       __dirname,
       '..',
       '..',
+      '..',
       'assets',
       'i18n',
       `${lang}.json`,
