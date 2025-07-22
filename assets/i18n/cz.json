@@ -1,0 +1,967 @@
+{
+	"app": {
+		"salons": {
+			"chooseLang": "Vyberte si jazyk",
+			"countries": { "fr": "Francie", "cz": "Česká republika", "ma": "Maroko" },
+			"chooseCity": "Vyberte si město",
+			"chooseFirst": "Nejdříve vyberte své město",
+			"city": "Město",
+			"addCity": "Přidejte své město",
+			"validate": "Validate",
+			"info": "info",
+			"address": "Adresa",
+			"workingHours": "Hours",
+			"number": "Number",
+			"collectingData": "Sbíráme výzvy od",
+			"addCityTitle": "Přidat město",
+			"add": "Add",
+			"cityAlreadyExists": " Toto město již v seznamu existuje!",
+			"collectionCompleted": "Získali jsme výzvy z ",
+			"lookingForData": "Chystáme se získat výzvy ze ",
+			"salon": "Salle de ",
+			"waitingPosition": " Čekání na vaši pozici",
+			"goodShow": "Dobré ",
+			"congrats": "Gratuluji k vaší výzvě!",
+			"challengeCompleted": "Gratuluji, výzva je dokončena!",
+			"toWalk": " To go ",
+			"lockPhone": "Můžete zamknout telefon",
+			"meter": "metry",
+			"remaining": "Stále máte",
+			"toArrive": "dostanete se do kruhu.",
+			"remainInside": "Zůstaňte v kruhu k potvrzení výzvy.",
+			"remainOutside": "Abyste potvrdili výzvu, musíte se dostat z kruhu."
+		},
+		"quizz": {
+			"metaTag": "Ověření dotazníků",
+			"tinyScreen": "Je nám líto, tvé zařízení není pro tento dotazník vhodné, použij prosím zařízení s větší obrazovkou.",
+			"quizzNotFound": "Tento kvíz zatím není dostupný.",
+			"errorOccured": "Došlo k chybě.",
+			"errorOccuredTitle": "Chyba připojení",
+			"nextModal": {
+				"title": "Dotazník",
+				"firstText": "Počet nezodpovězených otázek:",
+
+				"secondText": " Některé otázky z dotazníku jsi nezodpověděl(a). Jsi si jistý/á, že chceš dotazník odeslat v tomto stavu a přejít na další?",
+				"yes": "Ano",
+				"no": "Ne",
+				"toastr": {
+					"firstText": "Máš ",
+					"secondText": " nezodpovězené otázky.",
+					"title": "Chyba ověření",
+					"oneRemaining": "Musíš odpovědět ještě na jednu otázku."
+				}
+			},
+			"quizzAnswered": "odesláno",
+			"generalDescription": "Co tě čeká?",
+			"startQuizz": "Přejít na dotazníky",
+			"save": "Odeslat odpovědi",
+			"viewTitle": "Návod",
+			"fillAnswers": "Vyplnit dotazník",
+			"refreshMessage": "Pokud stránku obnovíš, všechny tvé odpovědi budou smazány.",
+			"verifyComponent": {
+				"title": "Kontrola uživatelského kódu",
+				"subtitle": "Dobrý den, máte již uživatelský kód?",
+				"secretKey": "Váš uživatelský kód",
+				"verify": "Potvrdit",
+				"validationError": "Musíte zadat svůj uživatelský kód!",
+				"footer": {
+					"join": "Chcete se zapojit do studie?",
+					"contact": "Kontaktujte nás"
+				},
+				"toastr": {
+					"keyverified": "Váš uživatelský kód byl úspěšně ověřen.",
+					"blocked": "Již jsi odpověděl(a) na všechny otázky, vrať se prosím později.",
+					"invalid": "Váš uživatelský kód je neplatný.",
+					"noQuizz": "Dotazník zatím neexistuje.",
+					"title": "Ověření"
+				}
+			},
+			"sportQuizzLabels": {
+				"noAnswer": "Nevím",
+				"noModerateActivity": "Neměl(a) jsem žádnou středně těžkou pohybovou aktivitu",
+				"noIntenseActivity": "Neměl(a) jsem žádnou intenzivní pohybovou aktivitu",
+				"noWalkingActivity": "Nechodil(a) jsem",
+				"minuteLabel": "Počet minut za den",
+				"hourLabel": "Počet hodin za den",
+				"dayLabel": "Počet dnů v týdnu",
+				"next": "Další",
+				"back": "Zpět"
+			},
+			"socialDemographicQuizzQuestions": {
+				"genre": "Tvé pohlaví",
+				"male": "Muž",
+				"female": "Žena",
+				"neutral": "Nebinární",
+				"age": "Tvůj věk",
+				"numberHint": "Zadej číslici",
+				"scolarLevel": "Právě studuji… nebo mé nejvyšší dosažené vzdělání bylo",
+				"level5": "Základní škola – první stupeň (1.-5. třída)",
+				"level3": "Základní škola – druhý stupeň (6.-9. třída)/Gymnázium/Konzervatoř",
+				"second": "Střední škola/Gymnázium/Konzervatoř ",
+				"Terminal": "Vysoká škola/Univerzita",
+				"principalHome": " Ve svém „domově“ (tedy tam, kde pobývám většinu času)",
+				"liveParent1": "Žiji převážně s oběma rodiči",
+				"liveParent2": "Žiji převážně s jedním rodičem",
+				"liveParent3": "Žiji převážně s jedním rodičem a s jeho/její partnerkou/partnerem",
+				"liveParent4": "Jiné",
+				"brotherhood": "Tvoji sourozenci",
+				"totalsiblings": "Celkový počet tvých vlastních sester/vlastních bratrů",
+				"totaldemisiblings": "Celkový počet tvých nevlastních sester/nevlastních bratrů",
+				"screenPractice": {
+					"title": "Jak jsi na tom s obrazovkami?",
+					"first": "Kolik obrazovek (chytrých telefonů, tabletů, herních konzolí, televizí, notebooků, stolních počítačů) máte (ty, tvoji rodiče, tvoji sourozenci, osoby bydlící s tebou) celkem ve vaší domácnosti (u vás doma)?",
+					"second": "Kolik obrazovek (smartphonů, tabletů, herních konzolí, televizí, notebooků, stolních počítačů) máš ve svém pokoji?"
+				},
+				"preventInputNumber": "Musíš zadat číslici, ne písmena.",
+				"principalUse": {
+					"title": "Jakým způsobem nejčastěji trávíš čas na obrazovkách?",
+					"first": "Pasivní sociální sítě (pouze sleduji příspěvky a komentáře, nepřidávám příspěvky, nekomentuji ani nelajkuji)",
+					"second": "Aktivní sociální sítě (vytvářím komentáře, příspěvky, lajkuji)",
+					"third": "Defenzivní sociální sítě (vytvářím komentáře, příspěvky a lajkuji, abych bránil(a) osoby nebo věci které jsou pro mě důležité)",
+					"fourth": "Videohry",
+					"fifth": "Seriály/Filmy",
+					"sixth": "Učení",
+					"seventh": "Jiné"
+				},
+				"phonePossession": {
+					"title": "Jak dlouho už vlastníš chytrý telefon (smartphone)?",
+					"first": "Žádný nevlastním nebo méně než 6 měsíců",
+					"second": "6 měsíců",
+					"third": "6 měsíců – 1 rok",
+					"fourth": "1-2 roky",
+					"fifth": "2-3 roky",
+					"sixth": "3-4 roky",
+					"seventh": "5 a více let"
+				}
+			},
+			"socialDemographicQuizzName": "Sociodemografické charakteristiky",
+			"socialDemographicQuizzTitle": "Řekni nám, kdo jsi... a co děláš",
+			"knowing": "vědomím",
+			"corresponds": "s vědomím, že číslice odpovídají",
+			"sportQuizz": "Pohybové aktivity",
+			"passionLeisure": "Nadšení pro volnočasové aktivity",
+			"passionLeisureQuestion": "Uveď jednu aktivitu, ať už související s obrazovkami nebo ne, kterou máš rád(a), je pro tebe důležitá a kterou trávíš značný čas (často se jí věnuješ).",
+			"PassionLeisurePromptQuestion": "Určitě chceš přejít na další dotazník? Pokud ne, uveď prosím svoji oblíbenou aktivitu.",
+			"Activity": "Aktivita",
+			"autoRegulateMotivation": "Řízení vlastní motivace",
+			"screenUsage": "Využití obrazovek",
+			"studyMotivation": "Motivace ke studiu",
+			"attitudeTowardWork": "Postoje a přístupy k práci",
+			"iphoneQuizz": {
+				"title1": "Zadejte prosím údaje o používání za poslední 5 dny, které najdete v",
+				"title2": "Nastavení",
+				"title3": "Pomocí kroků můžete postupovat podle snímků obrazovky.",
+				"title4": "Nezadávejte aplikace s méně než 3 minutami používání.",
+				"firstQ": "Zadejte počet aktivací vašeho iPhone",
+				"secondQ": "První aktivace",
+				"firstLabel": "První",
+				"lastLabel": "Poslední",
+				"numberOfTimeslabel": "Počet časů",
+				"nameApp": "Appname",
+				"thirdQ": "První a poslední otevření",
+				"fourthQ": "Počet otvorů",
+				"fifthQ": "Celkový čas strávený na obrazovce",
+				"hour": "hodiny",
+				"minute": "minuty",
+				"addApp": "Přidat aplikaci",
+				"yes": "zpět",
+				"no": "další",
+				"finish": "Dokončit",
+				"toast": {
+					"successTitle": "Odeslání údajů",
+					"successText": "Výborně, zaznamenali jsme data pro ",
+					"errorText": "Ujistěte se, že jste nezapomněli zadat informace o aplikaci, vždy je můžete smazat.",
+					"errorTitle": "Problém se vstupem"
+				},
+				"modal": {
+					"title": "Opravdu chcete přejít na další den?",
+					"text1": "Pouze jste vyplnili",
+					"text2": " aplikace pro ",
+					"yes": "ano",
+					"no": "Ne"
+				},
+				"yesterday": "včera, "
+			}
+		},
+		"legalNotice": "Právní informace",
+		"langObject": {
+			"chooseLang": "Vyberte si jazyk",
+			"lang": "Jazyk",
+			"fr": "Francouzština",
+			"en": "Angličtina",
+			"cz": "Čeština"
+		},
+		"backend": {
+			"notifications": {
+				"resetPass": {
+					"message": "Požádal(a) jste o e-mail pro obnovení hesla",
+					"subject": "Obnovení hesla"
+				},
+				"passReset": {
+					"message": "Vaše heslo bylo resetováno",
+					"subject": "Heslo změněno"
+				},
+				"feedbackSucceed": {
+					"subject": "Výzva byla uživatelem dokončena ",
+					"message": {
+						"first": "úspěšně dokončil(a) výzvu v kategorii ",
+						"second": "a prožíval(a) tuto emoci: ",
+						"third": "Instrukce k výzvě zněla:"
+					}
+				},
+				"subscriptionCanceled": {
+					"subject": "Platnost vypršela",
+					"message": "Platnost vypršela pro "
+				},
+				"deviceDetected": {
+					"subject": "Zjištěno nové zařízení",
+					"message": {
+						"first": "Bylo nalezeno nové zařízení, které se připojilo k tvému účtu",
+						"second": "Typ zařízení",
+						"third": "Umístění"
+					}
+				},
+				"contactSupport": {
+					"subject": "Pokus o podvod ",
+					"message": "Zařízení jsme dočasně zablokovali na nezbytné minimum. Pokud si myslíš, že se jedná o chybu, můžeš toto omezení odblokovat."
+				},
+				"forumAdded": {
+					"subject": "Otázka byla přidána do „Fóra“",
+					"message": "byla zveřejněna v oblasti „Fóra“."
+				}
+			}
+		},
+		"unlockDesktop": {
+			"title": "Požadavek na odemknutí potvrzen.",
+			"text": "Všechna omezení relací  ",
+			"unlocked": "byla odemčena."
+		},
+		"notfound": {
+			"title": "Ups! Uvedená stránka nebyla nalezena",
+			"text": "Je nám líto, tuto stránku jsme nebyli schopni dohledat"
+		},
+		"passwordReset": {
+			"title": "Obnovte své heslo",
+			"email": "Váš e-mail",
+			"mdp": "Nové heslo",
+			"mdpconfirm": "Potvrďte své nové heslo",
+			"confirm": "Potvrdit",
+			"passwordValid": "Obě hesla musí být totožná!",
+			"changing": "Heslo změněno!",
+			"notvalid": "Vyplňte prosím své heslo pro ověření",
+			"expired": "Platnost Vašeho odkazu pro resetování hesla vypršela."
+		},
+		"payment": {
+			"failure": {
+				"title": "Ups, při platbě došlo k chybě.",
+				"text": "Můžete to zkusit znovu z tohoto",
+				"link": "odkazu"
+			},
+			"success": {
+				"title": "Gratulujeme, úspěšně jste zakoupil(a) uživatelský kód.",
+				"text": "Nyní můžete ",
+				"download": "stáhnout",
+				"devices": "na své zařízení.",
+				"new": "Váš nový uživatelský kód:"
+			}
+		},
+		"toastMessage": {
+			"account": {
+				"title": "Můj účet",
+				"success": "Právě jste si změnil(a) heslo.",
+				"error": "Ups! Došlo k chybě, zkuste to prosím za chvíli."
+			}
+		},
+		"seoTitles": {
+			"landing": "Představení - Phonix Health",
+			"team": "Tým - Phonix Health",
+			"contact": "Kontaktujte nás - Phonix Health",
+			"login": {
+				"title": "Přihlášení do ovládacího panelu - Phonix Health",
+				"meta": "Přihlaste se do ovládacího panelu svého dítěte a získejte přístup ke všem jeho funkcím."
+			},
+			"register": {
+				"title": "Zaregistrujte se do ovládacího panelu - Phonix Health",
+				"meta": "Zaregistrujte se do ovládacího panelu Phonix Health, abyste mohl(a) co nejlépe sledovat používání zařízení Vašeho dítěte."
+			},
+			"download": "Stáhněte si aplikaci - Phonix Health",
+			"kids": "Moje děti - Phonix Health",
+			"dash": "Zobrazit výzvy ",
+			"monitor": "Zobrazit sledování ",
+			"health": "Podívejte se na zdraví ",
+			"settings": "Zobrazit nastavení ",
+			"token": "Koupit uživatelský kód - Phonix Health",
+			"account": "Můj účet - Phonix Health"
+		},
+		"notLoggedModal": {
+			"title": "Pozor",
+			"text": "Před odesláním dotazu se musíte přihlásit.",
+			"text1": "Před vstupem do „Fóra“ se musíte přihlásit.",
+			"title1": "Gratulujeme",
+			"userText": "Právě jste si vytvořili účet. Pro aktivaci zkontrolujte svůj e-mail.",
+			"docText": "Pro ověření Vaší identity Vás budeme kontaktovat co nejdříve.",
+			"button": "Přihlášení"
+		},
+		"myAccount": {
+			"title": "Můj účet",
+			"card": {
+				"title": "Nastavení účtu",
+				"first": {
+					"subtitle2": "Chcete změnit Vaše heslo",
+
+					"title": "Manage my account",
+					"subtitle1": "Change my E-mail",
+					"newEmail": "New E-mail",
+					"new": "Zadejte nové heslo",
+					"confirm": "Potvrďte Vaše nové heslo"
+				},
+				"second": {
+					"title": "Spravujte své přihlášení",
+					"name": "Jméno",
+					"age": "Věk",
+					"status": "Stav",
+					"toActive": "Pro aktivaci",
+					"inactive": "neaktivní",
+					"active": "aktivní",
+					"activate": "aktivovat",
+					"delete": "Vymazat"
+				},
+				"third": {
+					"title": "Podívejte se na oznámení",
+					"subject": "Název",
+					"message": "Zpráva"
+				}
+			}
+		},
+		"forum": {
+			"yes": "Ano",
+			"no": "Ne",
+			"card": {
+				"see": "Podívejte se na odpověď",
+				"delete": "Smazat",
+				"create": "Položit nový dotaz",
+				"wait": "Čekání na odpověď",
+				"reply": "Odpovědět",
+				"change": "Upravit",
+				"publish": "Odeslat"
+			},
+			"modal": {
+				"message": "Zpráva",
+				"content": "Vaše otázka",
+				"response": "Odpověď lékaře",
+				"title": "Položte svou otázku",
+				"ex": "Např. Myslím že moje dítě...",
+				"subtitle": "Název Vaší otázky",
+				"publish": "Odeslat",
+				"back": "Zpět",
+				"careful": "Buďte opatrní, Vaše otázka musí být specifická.",
+				"deleteTitle": "Jste si jistí?",
+				"deleteText": "Pokračováním svůj příspěvek smažete."
+			},
+			"toast": {
+				"successDelete": "Výborně! Právě jste smazal(a) svůj příspěvek.",
+				"error": "Ups! Došlo k chybě, zkuste to znovu za chvíli.",
+				"info": "Skvěle! Nic jste nezměnil(a).",
+				"successResponse": "Skvěle! Právě jste odpověděl(a) na otázku.",
+				"successUpdate": "Výborně! Právě jste změnil(a) svou odpověď.",
+				"moderator": "Výborně! Váš dotaz byl odeslán našemu správci."
+			}
+		},
+		"download": {
+			"firstStep": "Vytvořit účet",
+			"title": "Stáhnout mobilní aplikaci",
+			"app": "Stáhnout mobilní aplikaci",
+			"soon": "Brzy k dispozici",
+			"addDevices": "Přidat další zařízení",
+			"plug": "Zásuvka",
+			"tablet": "Tablet",
+			"pc": "Počítač",
+			"deliver": "Přidáno"
+		},
+		"articles": {
+			"title": "Novinky o ",
+			"button": "Více",
+			"publish": "Zveřejněno dne"
+		},
+		"login": {
+			"firstConnect": {
+				"title": "Dobrý den",
+				"text": "Phonix Health si můžete přidat na domovskou obrazovku prostřednictvím prohlížeče"
+			},
+			"toast": {
+				"error": {
+					"title": "Při přihlašování se vyskytl problém!",
+					"formTitle": "Při přihlašování se vyskytl problém!",
+					"text": "Během údržby prosím chvíli počkejte!",
+					"textResendActivateEmail": "Vyplňte prosím svůj email pro ověření",
+					"connectionTitle": "Problém s připojením",
+					"mdpIncorrect": "Nesprávné heslo",
+					"canReconnect": "Můžete se pokusit znovu připojit.",
+					"attemptFail1": "Pokusili jste se připojit více než 10krát, vraťte se za",
+					"attemptFail2": "hod a",
+					"attemptFail3": "min.",
+					"ip": "Vyskytl se problém s Vaším prohlížečem",
+					"emailMdp": "Vaše e-mailová adresa musí být platná a heslo musí splňovat všechny požadavky.",
+					"mdp": "Vaše heslo není platné.",
+					"email": "Vaše e-mailová adresa není platná.",
+					"captcha": "Než Vás přihlásíme, musíme ověřit, že nejste robot.",
+					"checkEmail": "Váš účet ještě není aktivní! Zkontrolujte prosím svůj e-mail a aktivujte ho.",
+					"notRegister": "Ještě nejste zaregistrován(a)! Zaregistrujte se, trvá to 2 sekundy"
+				},
+				"success": {
+					"connect": "Připojování",
+					"textConnect": "Jste připojeni!",
+					"titleResendResetEmail": "Zapomenuté heslo",
+					"textResendResetEmail": "Právě jsme na Váš e-mail poslali odkaz pro změnu hesla!",
+					"titleResendActivateEmail": "Aktivace účtu",
+					"textResendActivateEmail": "Odkaz zašleme znovu na Váš e-mail!"
+				}
+			},
+			"card": {
+				"title": "Přihlášení",
+				"button": "Přihlásit se",
+				"resetButton": "Zapomněl(a) jste své heslo?",
+				"notRegistred": "Ještě nejste zaregistrovaný/á?",
+				"notRegistredButton": "Zaregistrujte se",
+				"attempt5": "Překročili jste 5 pokusů o připojení!",
+				"resendLink": "Znovu odeslat odkaz pro aktivaci",
+				"password": "Heslo"
+			}
+		},
+		"register": {
+			"alerts": {
+				"title": "Ověření",
+				"email&mdpInvalid": "Vaše e-mailová adresa a heslo jsou neplatné.",
+				"mdpInvalid": "Vaše heslo není platné.",
+				"emailInvalid": "Vaše e-mailová adresa není platná.",
+				"captcha": "Než Vás zaregistrujeme, musíme ověřit, že nejste robot."
+			},
+			"card": {
+				"placeholder": {
+					"name": "Vaše jméno",
+					"confirm": "Potvrďte Vaše heslo"
+				},
+				"title": "Registrace",
+				"clinical": "Jsem lékař",
+				"button": "Zaregistrovat se",
+				"passwordValidation": {
+					"contains": "Obsahuje alespoň",
+					"charMissing": "Počet chybějících znaků",
+					"tiny": "malé písmeno",
+					"uppercase": "velké písmeno",
+					"number": "číslo",
+					"special": "speciální znak",
+					"char": "znaků",
+					"identical": "Hesla se shodují"
+				},
+				"notRegistred": "Jste již zaregistrovaný/á?",
+				"notRegistredButton": "Přihlaste se"
+			}
+		},
+		"ticket": {
+			"title": "Envoyez un ticket pour signaler un problème à notre équipe",
+			"email": "Votre E-mail",
+			"problemTitle": "Titre du problème",
+			"platform": "Plateforme",
+			"description": "Description du problème",
+			"putKey": "N'oubliez pas de renseigner votre clé !",
+			"noimageselected": "Aucune image sélectionnée.",
+			"send": "Envoyer le ticket"
+		},
+		"contact": {
+			"title": "Kontaktovat",
+			"successSent": "Výborně! Právě jste odeslali zprávu naší technické podpoře.",
+			"card": {
+				"title": "Kontaktujte nás",
+				"sendEmail": {
+					"title": "Chcete nám poslat e-mail?",
+					"description": "Poslat zprávu",
+					"first": "Chcete-li nástroj vyzkoušet v náhledu, kontaktujte:",
+					"or": "NEBO",
+					"last": "Chcete-li vyřešit technický problém, kontaktujte:",
+					"lastButton": "Open a ticket",
+					"moreInfo": "Další informace,",
+					"scheduleCall": "Zarezervujte si hovor.",
+					"participateToStudy": "Účastnit se studia"
+				},
+				"question": {
+					"title": "Máte dotaz ohledně nástroje",
+					"description": "Podívejte se na naši youtube stránku"
+				},
+				"accompagny": {
+					"title": "Potřebujete poradit?",
+					"description": "Nahlédněte do našeho „Fóra“"
+				}
+			}
+		},
+		"team": {
+			"title": "Tým z",
+			"projectManager": "Vedoucí projektu",
+			"scientificRef": "Vědecký pracovník",
+			"psychoResearch": "Výzkum v psychologii adolescentů",
+			"educationResearch": "Výzkum ve výchově adolescentů",
+			"developerWeb": "Vývoj webu",
+			"developerMobile": "Vývoj mobilního zařízení",
+			"modal": {
+				"age": "Věk",
+				"origin": "Zdroj"
+			}
+		},
+		"landing": {
+			"E": {
+				"openModalButton": "Je můj teenager závislý?",
+				"title": "Zeptáme se Vás na otázky ohledně Vašeho dítěte a na konci obdržíte skóre týkající se jeho/její závislosti na obrazovkách.",
+				"startButton": "Začít",
+				"baremes": {
+					"1": "Nikdy",
+					"2": "Občas",
+					"3": "Často",
+					"4": "Vždy"
+				},
+				"Questions": {
+					"0": "Je Vaše dítě přemýšlivé ohledně obrazovek (myšlenky na poslední použití nebo předpokládané další použití)?",
+					"1": "Potřebuje Vaše dítě používat obrazovky pro stále delší dobu, aby dosáhlo uspokojení?",
+					"2": "Cítí se Vaše dítě neklidné, mrzuté, depresivní nebo podrážděné, když se snaží omezit nebo přestat s používáním obrazovek?",
+					"3": "Zkoušelo Vaše dítě neúspěšně ovládat, omezit nebo přestat s používáním obrazovek?",
+					"4": "Používá Vaše dítě obrazovky jako prostředek úniku od problémů nebo ke zmírnění náladových poruch (pocity bezmoci, viny, úzkosti, deprese)?"
+				},
+				"emailTitle": "Zadejte svůj e-mail a okamžitě obdržíte skóre.",
+				"invalidEmail": "Zadejte platnou e-mailovou adresu",
+				"required": "povinné",
+				"finishButton": "Dokončeno!",
+				"successMessage": "Perfektně, právě jsme odeslali e-mail s výsledky Vašeho dítěte."
+			},
+			"presentationTitle": "Představení",
+			"productsPart": {
+				"trialTestTitle": "Technologie napříč platformami pro ",
+				"trialTestTitle1": "diagnóza",
+				"trialTestTitle2": "doprovázet",
+				"trialTestTitle3": "závislost na obrazovce",
+				"trialTestText": "Testováno na 400 mladých lidech ve věku 10-25 let.",
+				"productTitle": "naše aplikace",
+				"title": {
+					"first": "Změňte svůj digitální život pomocí našich",
+					"second": "technologií",
+					"third": "validováno ",
+					"fourth": "science"
+				},
+				"description": "Zlepšete své duševní a fyzické zdraví pomocí našich vědecky podložených digitálních produktů. Snižte rizika digitálního života s našimi vědecky podloženými produkty. Změňte svůj digitální život s našimi vědecky podloženými produkty",
+				"forthe": "Pro ",
+				"rok": " roky",
+				"knowMore": "Další informace",
+				"diagText": "výzkumníci a psychologové",
+				"careText": "psychologové",
+				"mindText": "dospělí",
+				"diag": "Pochopte vliv obrazovek na zdraví vašich pacientů.",
+				"care": "Digitální terapie, která pomůže vašim pacientům znovu získat zdravý životní styl u obrazovek.",
+				"educ": "Objevte nové aktivity a naučte se používat obrazovky zodpovědně.",
+				"mind": "Zlepšete své soustředění a své produktivitu snížením digitálních rušivých vlivů.",
+				"contactText1": "Vyzkoušejte",
+				"contactText2": " zdarma ",
+				"contactText3": "naše nástroje účastí v našem výzkumu :",
+				"toastError": "Váš e-mail není platný."
+			},
+			"contactModal": {
+				"title": "Požádejte náš tým, aby vás kontaktoval",
+				"name": "Jméno",
+				"prename": "Křestní jméno",
+				"email": "E-mail",
+				"proč": "Proč si přejete být kontaktováni?",
+				"send": "Odeslat"
+			},
+			"card": {
+				"first": "Phoenix Health Vám pomůže najít lepší digitální životní styl.",
+				"last": "Nechte se doprovázet:",
+				"emailPlaceholder": "Vložte svůj e-mail",
+				"button": "naplánovat hovor"
+			},
+			"bandeau1Text": "Partnerské laboratoře",
+			"bandeau2Text": "Podporují nás",
+			"videoSourceText": "Zdroj videa: Lumni - Závislost na obrazovce: jak nás dostane a jak proti tomu bojovat?",
+			"firstPart": {
+				"title": "Proč je důležité vědět, jak si řídit čas strávený u obrazovky?",
+				"image1": "Více času",
+				"image1.5": "s rodinou",
+				"image2": "Více času",
+				"image2.5": "na spánek",
+				"image3": "Více času",
+				"image3.5": "na učení"
+			},
+			"secondPart": {
+				"title0.5": "Jak Vám může",
+				"title": " pomoci trávit více času mimo obrazovky?",
+				"text1": " je software, který byl navržen pro boj se závislostí na obrazovkách. Ať už pracujeme, komunikujeme nebo odpočíváme, většinu času trávíme před obrazovkami.",
+				"text2": " software lze nainstalovat na všechny platformy - telefony, tablety, počítače, televize a videoherní konzole. Jeho úkolem je pomoci Vám najít zdravý digitální životní styl."
+			},
+			"thirdPart": {
+				"title": "Co je závislost na obrazovce?",
+				"text": "Přestože je pojem závislosti na obrazovce ve výzkumné komunitě stále diskutován, bylo zjištěno, že nadměrné trávení času před obrazovkami může mít přímý vliv na sedavý životní styl, deprese a nižší kvalitu spánku. Pro diagnostiku závislosti na obrazovkách bylo vyvinuto několik dotazníků. Dotazník o závislosti na obrazovkách můžete vyplnit sami kliknutím na tento odkaz: ",
+				"link": "Dotazníky"
+			}
+		},
+		"dashboard": {
+			"error": "Ups! Došlo k chybě, zkuste to prosím za chvíli.",
+			"buttons": {
+				"challenge": "Zobrazit výzvy",
+				"monitor": "Zobrazit sledování",
+				"health": "Zobrazit zdraví",
+				"params": "Nastavení",
+				"add": "Přidat dítě"
+			},
+			"token": {
+				"back": "Vrátit se",
+				"key": "Uživatelský kód",
+				"monthAway": "1 měsíc zdarma",
+				"month": "měsíc",
+				"access": "Přístup ke všem výzvám",
+				"available": "Dostupné na všech médiích",
+				"interface": "Správcovské rozhraní pro rodiče",
+				"activity": "Zprávy o aktivitě",
+				"buy": "Koupit",
+				"alreadyBought": "Máte již uživatelský kód?"
+			},
+			"dash": {
+				"error": "Ups! Došlo k chybě, zkuste to prosím za chvíli.",
+				"and": "a",
+				"hour": "hodiny",
+				"noData": "Momentálně nejsou žádná data",
+				"minute": "minuty",
+				"day": "dny",
+				"challenges": {
+					"close": "Zavřít",
+					"send": "Odeslat",
+					"cheat": "Podváděl(a) jsi?",
+					"congrats": "Gratulujeme k tvojí výzvě!",
+					"congratSuccess": "Skvěle, tvoji zpětnou vazbu jsme odeslali na",
+					"cheatText": "Podváděl(a) jsi!",
+					"challengeChart": {
+						"title": "Tabulka výzev",
+						"yAxis": "Počet výzev",
+						"noData": "V tuto chvíli nejsou žádná data"
+					},
+					"challengeTable": {
+						"title": "Všechny výzvy",
+						"of": "z",
+						"firstCol": "Pocity",
+						"secondCol": "Typ výzvy",
+						"thirdCol": "Datum"
+					}
+				},
+				"monitoring": {
+					"more": "Kliknutím zobrazíte",
+
+					"table": {
+						"name": "Jméno",
+						"time": "Čas",
+						"usage": "Použijte pro ",
+						"close": "Zavřít"
+					},
+					"doughnut": {
+						"title": "Sledování využití ",
+						"forDay": "včerejší den",
+						"forWeek": "týden",
+						"forMonth": "měsíc",
+						"day": "zobrazit včerejší den",
+						"week": "zobrazit posledních 7 dnů",
+						"month": "prohlédnout poslední měsíc",
+						"smartphone": "Telefon",
+						"desktop": "Počítač",
+						"tablet": "Tablet",
+						"plug": "Konzole",
+						"usage": "Použití"
+					},
+					"chart": {
+						"details": "Kliknutím zobrazíte podrobnosti",
+						"title": "Vývoj trávení digitálního času",
+						"iconTitle": "Typ použití digitální",
+						"game": "Videohry",
+
+						"recreatifTime": "rekreační čas",
+						"unrecreatifTime": "Nerekreační čas",
+						"stream": "Streamování",
+						"totalTime": "Total screen time",
+						"social": "celkový čas obrazovky",
+						"adult": "Website for adults",
+						"work": "Práce",
+						"other": "Jiné",
+						"noData": "Žádná data",
+						"internet": "Internetová navigace"
+					}
+				},
+				"health": {
+					"chart": {
+						"title": "Digitální zdraví",
+						"subTitle": "Čas mimo obrazovky: 24 h – (xH před obrazovkami + xH spánek)",
+						"topLabel": "Ukazatel životního stylu"
+					},
+					"indicator": { "title": "Impact des écrans sur la santé" },
+
+					"scale": {
+						"less": "méně než 4 hodiny",
+						"more": "více než",
+						"title": "Ukazatel spánku",
+						"advice": {
+							"title1": "Doporučená doba spánku",
+							"title2": "rozsah",
+							"is": "je",
+							"sleepText1": "Spal jste",
+							"sleepTextBelow": "za den<b> pod</b> minimální dobou doporučeného spánku",
+							"sleepText2": "průměrně za den tento týden, což",
+							"correspond": "<b> odpovídá </b>",
+							"sleepText3": "doporučené době spánku"
+						},
+						"min": "méně než",
+						"pus": "více než"
+					}
+				},
+				"params": {
+					"firstTitle": "Nastavení",
+					"firstView": {
+						"title": "Nastavení harmonogramu",
+						"description": "Nastavit Týden / Víkend / Spánek",
+						"inputLabel0": "Nastavit ",
+						"inputLabel1": "maximální počet",
+						"inputLabel2": "hodin volnočasové digitální aktivity v aplikacích",
+						"inputLabel3": "Nastavit od ",
+						"inputLabel4": "od kdy ",
+						"inputLabel5": "přístup k obrazovkám je ",
+						"inputLabel6": "omezen",
+						"week": "týden",
+						"weekEnd": "víkend",
+						"button": "aktualizovat"
+					},
+					"secondView": {
+						"title": "Odemkněte zařízení",
+						"description": "Odemkněte Telefon/Tablet/Počítač/Zásuvku",
+						"unlockTime": " time on the devices ",
+						"phone": "Telefon",
+						"cheat": " the cheat",
+						"unlock": "Unlock",
+						"lock": "Activate",
+						"tablet": "Tablet",
+						"desktop": "Počítač",
+						"plug": "Zásuvku"
+					},
+					"thirdView": {
+						"title": "Nastavení kategorie",
+						"description": "Upravit intenzitu blokování",
+						"social": "Sociální sítě",
+						"gaming": "Videohry",
+						"streaming": "Streaming",
+						"adult": "Web – 18",
+						"weakLevel": { "title": "Slabé", "description": "bude dostupné v ", "permanent": "permanence." },
+						"mediumLevel": {
+							"title": "Střední",
+							"description": "bude k dispozici ",
+							"jen": "pouze",
+							"description1": " pokud budou výzvy dokončeny."
+						},
+						"strongLevel": {
+							"title": "Silný",
+							"description": "již nebude ",
+							"nikdy": "nikdy",
+							"description1": " k dispozici."
+						},
+						"toast": {
+							"title": "Blokovat změnu intenzity",
+							"chosen": "Tato úroveň je již vybrána!",
+							"success": "Změna omezení byla úspěšně provedena.",
+							"error": "Došlo k chybě, zkuste to znovu později."
+						},
+						"modalTitleTO": "do",
+						"modalTitle": "Opravdu změníte úroveň kategorie"
+					},
+					"Smartphone": {
+						"title": "Seznam aplikací",
+						"add": "Add",
+						"search": "Najít aplikaci",
+						"firstCol": "Název aplikace",
+						"secondCol": " K dispozici v digitální podobě time",
+						"thirdCol": "Nikdy k dispozici",
+						"fourthCol": "odemknout"
+					},
+					"noApps": {
+						"Smartphone": "dosud není v telefonu nainstalován.",
+						"Tablet": "ještě není v tabletu nainstalován.",
+						"Počítač": "ještě není v počítači nainstalován."
+					},
+					"blockToast": {
+						"noApp": "Není vybrána žádná aplikace",
+						"title": "Blokování aplikací",
+						"Level1": "Úspěšně jste odemkli aplikaci.",
+						"Level2": "Úspěšně jste zablokovali aplikaci na základě digitálního času.",
+						"Level3": "Úspěšně jste zablokovali aplikaci."
+					},
+					"addApp": {
+						"title": "Blokovat",
+						"noWeb": "No website selected",
+						"noApp": "No app selected",
+						"subtitle": "Všechny aplikace",
+						"toast": {
+							"title": "Blokování aplikace",
+							"missingInput": "Musíte vybrat aplikaci",
+							"missingLevel": "Musíte zvolit úroveň blokování",
+							"successL2": "Výborně, zablokovali jste aplikace založená na digitálním čase.",
+							"successL3": "Výborně, aplikaci jste zablokovali."
+						}
+					},
+					"toast": {
+						"success": "Úspěšně jste aktualizoval(a) nastavení",
+						"errorTitle": "Chyba",
+						"appError": "Musíte vybrat existující aplikaci.",
+						"title": "Aktualizovat",
+						"addError": "Musíte si vybrat, zda blokovat nebo povolit.",
+						"error": "Došlo k chybě, postaráme se o to!",
+						"validation": "Musíte zvolit číslici v rozmezí 0 až 24"
+					},
+					"secondTitle": "Nastavení zařízení",
+					"app": "Aplikace",
+					"web": "Webová stránka",
+					"website": "Nastavení webu",
+					"websiteDescription": "Přidat a odebrat webové stránky",
+					"phoneDescription": "Přidat a zakázat aplikaci",
+					"desktopDescription": "Přidat a zakázat nebo software",
+					"phone": "Nastavení Telefonu",
+					"tablet": "Nastavení Tabletu",
+					"desktop": "Nastavení Počítače",
+					"addOrBlock": "Chcete povolit nebo zablokovat ",
+					"addOrBlockApp": "Chcete povolit nebo zablokovat ",
+					"your": "Kategorie",
+					"apps": "Aplikace",
+					"one": "a",
+					"one1": "a",
+					"auth": "Povolit",
+					"deny": "Zakázat",
+					"authorized": "povoleno",
+					"denyed": "blokováno",
+					"none": "Ne",
+					"subs": "registrováno",
+					"soft": "software",
+					"add": "Přidat",
+					"view": "Zobrazit",
+					"addApps": "aplikaci",
+					"viewApps": "všechny aplikace",
+					"addWeb": "stranu",
+					"addSoft": "software",
+					"viewWeb": "všechny strany",
+					"viewSoft": "všechny software",
+					"modalText": "Chcete smazat ",
+					"deleteSuccess": "Úspěšně jste smazal(a) ",
+					"addSuccess": "Právě jste přidali ",
+					"addSuccess1": "do Vašeho seznamu."
+				}
+			},
+			"welcomefirst": "Vítejte",
+			"welcomelast": "ve Vašem ovládacím panelu",
+			"kidcard": {
+				"associate": "Příbuzný",
+				"search": "Hledat",
+				"name": "Jméno",
+				"Objectif": "Cíl",
+				"key": "Kód",
+				"keyText": "Tento uživatelský kód jste ještě nepoužil(a)",
+				"addKid": "Přidat dítě",
+				"addKidText1": "Přidejte dítě vygenerováním nového",
+				"addKidText2": "uživatelského kódu",
+				"age": "Věk",
+				"year": "let",
+				"therapy": "terapie",
+				"observ": "sledování",
+				"access": "Přístup",
+				"download": "Stáhnout",
+				"associateModalText": "Chystáte se přidružit relaci na ploše k účtu uživatele ",
+				"deleteModal": {
+					"title": "Jste si jistý/á, že chcete dotaz smazat?",
+					"text": "Chystáte se smazat účet uživatele ",
+					"textReactive": "Chystáte se znovu aktivovat účet uživatele ",
+					"putMDP": "Zadejte heslo.",
+					"ReputMDP": "Musíte zadat své heslo.",
+					"yes": "Ano",
+					"no": "Ne"
+				},
+				"toast": {
+					"deleted": "Právě jste smazal(a) účet ",
+					"perfect": "Skvěle!",
+					"noChange": "Nic nebylo změněno.",
+					"activated": "Právě jste aktivoval(a) účet ",
+					"associated": "Právě jste připojil(a) účet ",
+					"session": "do relace"
+				}
+			}
+		},
+		"navbar": {
+			"buttons": {
+				"forum": "Fórum",
+				"products": "Produkt",
+				"article": "Aktuality",
+				"account": "Můj účet",
+				"kids": "Moje děti",
+				"logout": "Odhlásit se",
+				"download": "Stáhnout",
+				"login": "Přihlásit se",
+				"contact": "Kontaktujte nás",
+				"us": "Kdo jsme",
+				"landing": "O nás"
+			}
+		}
+	},
+	"pdf": {
+		"title": "Zpráva Phonix Health",
+		"age": "let.",
+		"produced": "Vytvořeno dne",
+		"Smartphone": "Chytrý telefon",
+		"Computer": "Počítač",
+		"Tablet": "Tablet",
+		"Plug": "Herní konzole",
+		"hour": "hodin",
+		"minute": "minut",
+		"day": "den",
+		"and": "and",
+		"lineChart": {
+			"title": "Vývoj času stráveného digitálním volným časem",
+			"totalTime": "Celkový čas",
+			"recreatifTime": "Videohry / Streaming / Sociální média / Weby pro dospělé",
+			"averageTotalTime": "Průměrný celkový čas pro věkovou skupinu",
+			"averageRecreatifTime": "Průměrný čas strávený volnočasovými aktivitami pro věkovou skupinu",
+			"timeMajorilySpent": "Váš celkový čas je převážně stráven na:"
+		},
+		"generalDoughnutChart": {
+			"title": "Sledování týdenního používání",
+			"recreatifTime": "Čas strávený v rekreaci",
+			"unrecreatifTime": "Čas strávený v nezábavných aktivitách",
+			"averageTotalTime": "Průměrná doba strávená u obrazovky: ",
+			"recreatifTimeText": " z vašeho času stráveného u obrazovky je věnováno zábavným aplikacím, což průměrně představuje ",
+			"unrecreatifTimeText": " z vašeho času stráveného u obrazovky je věnováno nezábavným aplikacím, což průměrně představuje "
+		},
+		"sleepGraph": {
+			"title": "Odhad spánku",
+
+			"text": "Based on the data of ",
+			"device": "your device",
+			"devices": "your devices",
+			"restOfText": ", we estimate that you sleep an average of",
+			"whichis": "což je",
+			"over": "nad",
+			"under": "pod",
+			"ofAdvicedTime": "doporučeným časem pro vaše věkovou skupinu."
+		},
+		"detailedDoughnutChart": {
+			"title": "Podrobné sledování týdenního používání",
+			"recreatifTime": "Váš zábavný čas zahrnuje: ",
+			"unrecreatifTime": "Váš nezábavný čas zahrnuje: ",
+			"other": "Jiné",
+			"game": "Videohry",
+			"social": "Sociální média",
+			"internet": "Internetové prohlížení",
+			"work": "Práce",
+			"streaming": "Streaming",
+			"adult": "Weby pro dospělé"
+		},
+		"radarChart": {
+			"title": "Vliv obrazovek na zdraví",
+			"analyzeText": "Podle naší analýzy je vaše používání obrazovek především spojeno s vysokým skóre v oblasti: ",
+			"adviceText": "Intenzivní používání obrazovek může být spojeno se zvýšeným skóre úzkostno-depresivních příznaků z různých důvodů. Sociální média a online hry mohou vytvářet prostředí neustálého srovnávání se s ostatními, což vyvolává pocit nespokojenosti a nedostatečnosti, což může zhoršovat úzkost a depresi. Vliv na spánek je také klíčovým faktorem, protože používání obrazovek před spaním narušuje produkci melatoninu, což vede k nespavosti a problémům se spánkem, které často souvisí s úzkostno-depresivními poruchami. Kromě toho sedavý životní styl spojený s nadměrným používáním obrazovek a používání obrazovek jako únikového mechanismu také může zhoršovat úzkostné a depresivní symptomy. Terapie, kterou budete absolvovat, vám pomůže najít zdravou rovnováhu ve vašem používání obrazovek a pečovat o váš duševní a emoční blahobyt tím, že rozšíříte své aktivity a podpoříte skutečné sociální interakce."
+		},
+		"contact": "Pro více informací nás prosím kontaktujte na následující adrese: "
+	}
+}

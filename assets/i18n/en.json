@@ -1,0 +1,1384 @@
+{
+  "app": {
+    "webview": {
+      "blockedwebsite": {
+        "title": "FORBIDDEN ACCESS",
+        "subtitle": "You tried to access a website that was blocked by ",
+        "webtitle": "Website visited",
+        "reasontext": "Reason of blocking",
+        "categoryblock": "Blocked by category",
+        "notimeleft": "Screen time consumed",
+        "manualblock": "Bloqued Manually",
+        "footer": "If you think this block is an error, please contact your support service."
+      }
+    },
+    "oursmartphone": "Our smartphone",
+    "order": "Order",
+    "mind": {
+      "waiting": "Waiting for connection...",
+      "waiting_title": "Phonix Mind Therapist"
+    },
+    "footer": {
+      "ressources": "Resources",
+      "socialmedia": "Our social networks",
+      "reglements": "Regulatory",
+      "studios": "Our content studios",
+      "discover": "Discover",
+      "news": "News",
+      "team": "Team",
+      "langue": "Language: ",
+      "legalmentions": "Legal mentions",
+      "salecondition": "Terms and conditions of sale and use",
+      "confidentialpolitics": "Privacy policy"
+    },
+    "salons": {
+      "recaptitle1": "Research results",
+      "recaptitle2": "for the city :",
+      "chooseLang": "Choose your country",
+      "countries": {
+        "fr": "France",
+        "cz": "Czech Republic",
+        "ma": "Morocco"
+      },
+      "salon_type": "Lobby's type",
+      "salon_count": "Lobbies found",
+      "retry": "Retry",
+      "no_country": "No country have been chosen",
+      "salonadded": "Lobby added for the type",
+      "lobbiesnotfound1": "We found no lobbies near",
+      "lobbiesnotfound2": "for the lobby",
+      "country": "Country",
+      "searchcountry": "Search your country",
+      "addcountry": "Add a country",
+      "addingcountry": "Adding a country",
+      "sureaddingcountry1": "Are you sure to add",
+      "sureaddingcountry2": "as a country ?",
+      "yes": "Yes",
+      "no": "No",
+      "countryadded": "added successfully",
+      "nocountry": "No country with this name",
+      "undo": "Undo",
+      "salon_types": {
+        "cinema": "Cinema",
+        "library": "Library",
+        "museum": "Museum",
+        "skatepark": "Skatepark",
+        "swimmingPool": "Swimming pool",
+        "gym": "Sports gym",
+        "out": "Home"
+      },
+      "workinghours": "Opening hours",
+      "closed": "Closed",
+      "weekdays": {
+        "0": "Monday",
+        "1": "Tuesday",
+        "2": "Wednesday",
+        "3": "Thursday",
+        "4": "Friday",
+        "5": "Saturday",
+        "6": "Sunday"
+      },
+      "salonsSubscribed": "Enjoy your activity !",
+      "for": "for",
+      "noSalonFound": "No activity found",
+      "chooseCity": "Choose your city",
+      "searchCity": "Search your city",
+      "chooseFirst": "Choose your city first",
+      "city": "City",
+      "addCity": "Add your city",
+      "validate": "Validate",
+      "info": "info",
+      "address": "Address",
+      "workingHours": "Hours",
+      "number": "Number",
+      "collectingData": "We are collecting lobbiyes from ",
+      "addCityTitle": "Add a city",
+      "add": "Add",
+      "cityAlreadyExists": "This city already exists in the list!",
+      "collectionCompleted": "We have retrieved lobbies from ",
+      "lookingForData": "We are going to retrieve lobbies from ",
+      "salon": "Salle de ",
+      "waitingPosition": "Waiting for your position",
+      "goodShow": "Good ",
+      "congrats": "Congratulations on your lobby !",
+      "challengeCompleted": "Congratulations the lobby is complete!",
+      "toWalk": " To go ",
+      "lockPhone": "You can lock your phone",
+      "meter": "meters",
+      "remaining": "You still have",
+      "toArrive": "to get to the circle.",
+      "remainInside ": "Stay in the circle to complete the lobby.",
+      "remainOutside": "You have to get out of the circle to validate the lobby."
+    },
+    "quizz": {
+      "metaTag": "Questionnaire Verification",
+      "tinyScreen": "We're sorry, your device is not suitable for this questionnaire, please use a larger screen.",
+      "errorOccured": "An error has occurred.",
+      "quizzNotFound": "This quiz is not yet available.",
+      "errorOccuredTitle": "Connection error",
+      "nextModal": {
+        "title": "Questionnaire",
+        "firstText": "You did not answer ",
+        "secondText": " questions, are you sure to send it unanswered and move on to the next one ?",
+        "yes": "Yes",
+        "no": "No",
+        "toast": {
+          "firstText": "You have left",
+          "secondText": "unanswered questions.",
+          "title": "Validation error",
+          "oneRemaining": "You have one question left to answer."
+        }
+      },
+      "quizzAnswered": "Sent.",
+      "generalDescription": "General Description",
+      "startQuizz": "Start the quiz",
+      "save": "Save",
+      "viewTitle": "View Setpoint",
+      "fillAnswers": "Fill Answers",
+      "refreshMessage": "If you refresh the page, all your replies will be deleted.",
+      "verifyComponent": {
+        "title": "Verifying your secret key",
+        "subtitle": "Hello, do you already have a secret key?",
+        "secretKey": "Your secret key",
+        "verify": "Verify",
+        "validationError": "You must enter your key!",
+        "footer": {
+          "join": "Do you want to join the study?",
+          "contact": "contact us"
+        },
+        "toastr": {
+          "keyverified": "Your key is verified.",
+          "blocked": "You have already answered all the questions, come back later.",
+          "invalid": "Your key is invalid.",
+          "noQuizz": "The quiz does not exist yet.",
+          "title": "Verification"
+        }
+      },
+      "sportQuizzLabels": {
+        "noAnswer": "I don't know",
+        "noModerateActivity": "I had no moderate physical activity",
+        "noIntenseActivity": "I didn't have any intense physical activity",
+        "noWalkingActivity": "I didn't walk",
+        "hourLabel": "Hours at total",
+        "minuteLabel": "Minutes at total",
+        "dayLabel": "Days per week",
+        "next": "Next",
+        "back": "Back"
+      },
+      "socialDemographicQuizzQuestions": {
+        "genre": "Votre genre",
+        "male": "Masculin",
+        "female": "Féminin",
+        "neutral": "Neutre",
+        "age": "Votre âge",
+        "numberHint": "Enter a number",
+        "scolarLevel": "Votre niveau scolaire",
+        "level5": "6e ou 5e",
+        "level3": "4e ou 3e",
+        "second": "lycée",
+        "Terminal": "université",
+        "principalHome": "Dans mon foyer familial (principal)",
+        "liveParent1": "Je vis principalement avec mes deux parents",
+        "liveParent2": "Je vis principalement avec un de mes parents",
+        "liveParent3": "Je vis principalement avec un de mes parents et un beau-parent",
+        "liveParent4": "Autre situation",
+        "brotherhood": "Votre fraterie",
+        "totalsiblings": "Total de frères et sœurs",
+        "totaldemisiblings": "Total de demi-sœurs/demi-frères",
+        "screenPractice": {
+          "title": "Pratique personnelle des écrans",
+          "first": "Combien il y a-t-il d’écrans (smartphones, tablettes, consoles de jeux vidéo, télévision, ordinateur portable, ordinateur fixe) dans votre foyer (personnes de votre foyer, par exemple, vous, vos parents, vos frères et sœurs) ?",
+          "second": "Combien il y a-t-il d’écrans (smartphones, tablettes, consoles de jeux vidéo, télévision, ordinateur portable, ordinateur fixe) dans votre chambre ?"
+        },
+        "preventInputNumber": "Vous devez inscrire un chiffre et non du texte.",
+        "principalUse": {
+          "title": "Que faites-vous principalement sur les écrans ?",
+          "first": "-Réseaux sociaux passifs (regarder les posts",
+          "first1": " et les commentaires sans poster, ni commenter ni liker)",
+          "second": "- Réseaux sociaux actifs (commenter, publier, liker)",
+          "third": "- Réseaux sociaux défensifs (commenter, publier, liker ",
+          "third1": " pour défendre des personnes ou des causes",
+          "third2": "qui me tiennent à coeur)",
+          "fourth": "Jeux vidéo",
+          "fifth": "Séries/Films",
+          "sixth": "Apprentissage",
+          "seventh": "Autres"
+        },
+        "phonePossession": {
+          "title": "Depuis combien de temps possédez-vous un smartphone ?",
+          "first": "Pas de téléphone ou moins de 6 mois",
+          "second": "Depuis 6 mois",
+          "third": "Entre 6 mois et 1 an",
+          "fourth": "Entre 1 an et 2 ans",
+          "fifth": "Entre 2 ans et 3 ans",
+          "sixth": "Entre 3 ans et 4 ans",
+          "seventh": "Depuis 5 ans ou +"
+        }
+      },
+      "errorChecks": {
+        "number": {
+          "label": "Enter a number",
+          "hint": "This field needs to be a number",
+          "toastr": "You entered a text instead of a number."
+        },
+        "text": {
+          "label": "Enter a text",
+          "hint": "This field needs to be a text",
+          "toastr": "You entered a number instead of a text."
+        }
+      },
+      "finalquestion": {
+        "title": "Last question !",
+        "question": "Do you want to get the control back on your screens ?",
+        "yes": "Yes",
+        "no": "No",
+        "subquestion": "How keen are you to try the Phonix Health program ?",
+        "textquestion": "What aspect do you want this to help you with?",
+        "hint": "Sleep earlier..."
+      },
+      "socialDemographicQuizzName": "Caractéristiques socio-démographiques",
+      "socialDemographicQuizzTitle": "Dites-nous qui vous êtes… et ce que vous faites",
+      "knowing": "knowing",
+      "corresponds": "knowing that the numbers correspond to",
+      "sportQuizz": "Physical activities",
+      "passionLeisure": "Passion for leisure",
+      "passionLeisureQuestion": "Name one activity, screen-related or not, that you enjoy the most, that is important to you and that you make time for in your life.",
+      "PassionLeisurePromptQuestion": "Are you sure you'll skip to the next quiz ? If not, please name an activity you enjoy.",
+      "Activity": "Activity",
+      "autoRegulateMotivation": "Self regulation of motivation",
+      "studyMotivation": "Study Motivation",
+      "attitudeTowardWork": "Attitudes towards work",
+      "screenUsage": "Screen Usage",
+      "iphoneQuizz": {
+        "title1": "Please enter your usage data for the past 5 days, which you can find in",
+        "title2": "Settings",
+        "title3": "You can follow the screenshots for guidance on the steps.",
+        "title4": "Please do not enter apps with less than 3 minutes of usage.",
+        "firstQ": "Enter the number of activations of your iPhone",
+        "secondQ": "First activation",
+        "firstLabel": "First",
+        "lastLabel": "Last",
+        "numberOfTimeslabel": "Number of times",
+        "nameApp": "App name",
+        "thirdQ": "First and last opening",
+        "fourthQ": "Number of openings",
+        "fifthQ": "Total screen time",
+        "hour": "hours",
+        "minute": "minutes",
+        "addApp": "Add an app",
+        "back": "Back",
+        "next": "Next",
+        "finish": "Finish",
+        "toast": {
+          "successTitle": "Data submission",
+          "successText": "Perfect, we have recorded the data for the ",
+          "errorText": "Make sure you haven't forgotten to enter the app info, you can always delete them.",
+          "errorTitle": "Input problem"
+        },
+        "modal": {
+          "title": "Are you sure you want to move on to the next day?",
+          "text1": "You have only filled out ",
+          "text2": " app(s) for the ",
+          "yes": "Yes",
+          "no": "No"
+        },
+        "yesterday": "Yesterday, "
+      }
+    },
+    "backend": {
+      "notifications": {
+        "resetPass": {
+          "message": "You have requested a password reset email",
+          "subject": "Password reset"
+        },
+        "passReset": {
+          "message": "Your password has been reset",
+          "subject": "Password Reset"
+        },
+        "feedbackSucceed": {
+          "subject": "A challenge has been completed by ",
+          "message": {
+            "first": "has successfully completed a challenge in the category ",
+            "second": "and experienced the emotion: ",
+            "third": "The challenge instruction was:"
+          }
+        },
+        "subscriptionCanceled": {
+          "subject": "Expired subscription",
+          "message": "subscription has been expired for "
+        },
+        "deviceDetected": {
+          "subject": "A new device has been detected",
+          "message": {
+            "first": "We have detected a new device that has connected to your account",
+            "second": "Device type",
+            "third": "Location"
+          }
+        },
+        "contactSupport": {
+          "subject": "Cheat attempt for ",
+          "message": "So we have temporarily blocked his devices to the bare minimum. If you think this is a mistake, you can unblock this restriction."
+        },
+        "forumAdded": {
+          "subject": "Question to the forum added",
+          "message": "has been posted to the Forum area."
+        }
+      }
+    },
+    "legalNotice": "Legal Notice",
+    "langObject": {
+      "chooseLang": "Choose your language",
+      "lang": "Language",
+      "fr": "French",
+      "en": "English",
+      "cz": "Czech"
+    },
+    "associateUser": {
+      "title": "Association request acknowledged.",
+      "text": "The session ",
+      "associated": "has been associated with the profile of "
+    },
+    "unlockDesktop": {
+      "title": "Unlock request acknowledged.",
+      "text": "All session restrictions of  ",
+      "unlocked": "have been unlocked."
+    },
+    "notfound": {
+      "title": "Oops! Page not found",
+      "text": "We're sorry, we couldn't find this page"
+    },
+    "passwordReset": {
+      "title": "Reset your password",
+      "email": "Your Email",
+      "mdp": "New password",
+      "mdpconfirm": "Confirm your new password",
+      "confirm": "Confirm",
+      "passwordValid": "Both passwords must be identical",
+      "changing": "Change the password",
+      "notvalid": "Please fill in your Password for validation",
+      "expired": "Your password reset link has expired"
+    },
+    "payment": {
+      "failure": {
+        "title": "Oops, an error occurred during payment.",
+        "text": "You can try again from this",
+        "link": "link"
+      },
+      "success": {
+        "title": "Congratulations, you have successfully purchased a user key.",
+        "text": "You can now ",
+        "download": "download",
+        "devices": "on your devices.",
+        "new": "Your new user key :"
+      }
+    },
+    "toastMessage": {
+      "account": {
+        "title": "My Account",
+        "success": "You just changed your password.",
+        "error": "Oops! An error occurred, try again later."
+      }
+    },
+    "seoTitles": {
+      "landing": "AI-based medical device against depression linked to digital sedentary lifestyle - Phonix Health",
+      "team": "The team - Phonix Health",
+      "contact": "Contact us - Phonix Health",
+      "login": {
+        "title": "Dashboard Login - Phonix Health",
+        "meta": "Login to your child's Dashboard to access all its features."
+      },
+      "register": {
+        "title": "Register for the Dashboard - Phonix Health",
+        "meta": "Sign up for the Phonix Health Dashboard to best monitor your child's device use."
+      },
+      "download": "Download the tool - Phonix Health",
+      "kids": "All kids - Phonix Health",
+      "dash": "View challenges of ",
+      "monitor": "View monitoring of ",
+      "health": "See the health of ",
+      "settings": "See the settings of ",
+      "token": "Buy a user key - Phonix Health",
+      "account": "My account - Phonix Health"
+    },
+    "notLoggedModal": {
+      "title": "Attention",
+      "text": "You must login before posting your question.",
+      "text1": "You must login before accessing the forum.",
+      "title1": "Congratulations",
+      "userText": "You have just created your account. Please check your email to activate it.",
+      "docText": "We will contact you to verify your identity as soon as possible.",
+      "button": "Login"
+    },
+    "myAccount": {
+      "title": "My Account",
+      "card": {
+        "title": "Account Settings",
+        "first": {
+          "subtitle2": "Change your password",
+          "title": "Manage my account",
+          "subtitle1": "Change my E-mail",
+          "newEmail": "New E-mail",
+          "new": "New password",
+          "confirm": "confirm your password"
+        },
+        "second": {
+          "title": "Manage your subscriptions",
+          "name": "Name",
+          "age": "Age",
+          "status": "Status",
+          "toActive": "To activate",
+          "inactive": "inactive",
+          "active": "active",
+          "activate": "Activate",
+          "delete": "Delete"
+        },
+        "third": {
+          "title": "See the notifications",
+          "subject": "Title",
+          "message": "Message"
+        }
+      }
+    },
+    "forum": {
+      "yes": "Yes",
+      "no": "No",
+      "card": {
+        "see": "See the answer",
+        "delete": "Delete",
+        "create": "Create a discussion",
+        "wait": "Waiting for a reply",
+        "reply": "reply",
+        "change": "Modify",
+        "publish": "published on"
+      },
+      "modal": {
+        "message": "Message",
+        "content": "Content",
+        "response": "Clinician response",
+        "title": "Ask your question",
+        "ex": "Ex. I think my child...",
+        "subtitle": "Title",
+        "publish": "Publish",
+        "back": "Back",
+        "careful": "Be careful, your question must be unique.",
+        "deleteTitle": "Are you sure?",
+        "deleteText": "You will delete your post by continuing."
+      },
+      "toast": {
+        "successDelete": "Great! You just deleted your post.",
+        "error": "Oops! An error occurred, try again later.",
+        "info": "Perfect! You didn't change anything.",
+        "successResponse": "Perfect! You just answered the question.",
+        "successUpdate": "Great! You just changed your answer.",
+        "moderator": "Great! Your question has been sent to our moderator."
+      }
+    },
+    "download": {
+      "firstStep": "Create an account",
+      "title": "Download",
+      "app": "Download the app",
+      "soon": "Available soon",
+      "addDevices": "Add more devices",
+      "plug": "Connected plug",
+      "tablet": "Tablet",
+      "pc": "Desktop",
+      "deliver": "Delivery"
+    },
+    "articles": {
+      "title": "Articles of ",
+      "button": "More",
+      "publish": "published"
+    },
+    "login": {
+      "firstConnect": {
+        "title": "Hello",
+        "text": "You can add Phonix Health to your home screen through your browser"
+      },
+      "toast": {
+        "error": {
+          "title": "Internal problem",
+          "formTitle": "Input problem",
+          "text": "Please wait a few moments during maintenance!",
+          "textResendActivateEmail": "Please fill in your email for validation",
+          "connectionTitle": "Connection problem",
+          "mdpIncorrect": "Incorrect Password",
+          "canReconnect": "You can try to reconnect.",
+          "attemptFail1": "You have tried to connect more than 10 times, come back in",
+          "attemptFail2": "hours and ",
+          "attemptFail3": "minutes",
+          "ip": "A problem with your browser occured",
+          "emailMdp": "Your email address must be valid and your password must have all requirements",
+          "mdp": "Your password must be valid",
+          "email": "Your email address must be valid",
+          "captcha": "We need to verify that you are not a robot before you log in",
+          "checkEmail": "Your account is not active yet, please check your mail to activate it",
+          "notRegister": "You are not registered yet ! Register, it takes 2 seconds"
+        },
+        "success": {
+          "connect": "Connection",
+          "textConnect": "You are connected!",
+          "titleResendResetEmail": "Forgot your password",
+          "textResendResetEmail": "We just sent the link to your email to change your password!",
+          "titleResendActivateEmail": "Account activation",
+          "textResendActivateEmail": "We just resend the link to your email!"
+        }
+      },
+      "card": {
+        "title": "Login",
+        "button_send_link": "Send link",
+        "button": "Login",
+        "resetButton": "Forgot your password ?",
+        "notRegistred": "Not registered yet ?",
+        "notRegistredButton": "Register",
+        "attempt5": "You reached your maximum attempts (5)",
+        "resendLink": "Resend activation link",
+        "password": "Password"
+      }
+    },
+    "register": {
+      "alerts": {
+        "title": "Input validation",
+        "email&mdpInvalid": "Your email address and password are invalid.",
+        "mdpInvalid": "Your password must be valid.",
+        "emailInvalid": "Your email address must be valid.",
+        "captcha": "We need to verify that you are not a robot before you register."
+      },
+      "card": {
+        "placeholder": {
+          "name": "Your name",
+          "confirm": "Confirm your password"
+        },
+        "title": "Register",
+        "clinical": "I'm a clinician",
+        "button": "Registration",
+        "passwordValidation": {
+          "contains": "Contains",
+          "charMissing": "Number of missing characters",
+          "tiny": "Lower case",
+          "uppercase": "Upper case",
+          "number": "number",
+          "special": "special character",
+          "char": "characters",
+          "identical": "Identical passwords"
+        },
+        "notRegistred": "Already registered ?",
+        "notRegistredButton": "Login"
+      }
+    },
+    "ticket": {
+      "title": "Envoyez un ticket pour signaler un problème à notre équipe",
+      "email": "Votre E-mail",
+      "problemTitle": "Titre du problème",
+      "platform": "Plateforme",
+      "description": "Description du problème",
+      "putKey": "N'oubliez pas de renseigner votre clé !",
+      "noimageselected": "Aucune image sélectionnée.",
+      "send": "Envoyer le ticket"
+    },
+    "contact": {
+      "title": "Contact",
+      "successSent": "Perfect ! you just sent a message to our technical support.",
+      "card": {
+        "title": "Contact-us",
+        "sendEmail": {
+          "title": "Would you like to send us an email ?",
+          "description": "Send a message",
+          "first": "To try the tool in preview, contact:",
+          "or": "OR",
+          "last": "To solve a technical problem, contact:",
+          "lastButton": "Open a ticket",
+          "moreInfo": "For more information,",
+          "scheduleCall": "Book a call.",
+          "participateToStudy": "Participate to study"
+        },
+        "question": {
+          "title": "You have a question about the tool",
+          "description": "Check our youtube page"
+        },
+        "accompagny": {
+          "title": "Do you need accompaniment ?",
+          "description": "Consult our forum"
+        }
+      }
+    },
+    "team": {
+      "title": "The team of",
+      "projectManager": "AI engineer",
+      "scientificRef": "Scientific referent",
+      "psychoResearch": "Research in adolescent psychology",
+      "educationResearch": "Research in adolescent education",
+      "developerWeb": "Software engineer",
+      "developerMobile": "Mobile engineer",
+      "modal": {
+        "age": "Age",
+        "origin": "Origin"
+      }
+    },
+    "landing": {
+      "final": {
+        "firstpart": {
+          "title": {
+            "medical": "Medical device",
+            "based": "based on",
+            "ai": "AI",
+            "upon": "against",
+            "depression": "depression",
+            "linked": "related to",
+            "sedentarity": "digital sedentariness"
+          },
+          "info": "Class II-A medical device currently undergoing clinical validation",
+          "button": "Discover our smartphone",
+          "arguments": [
+            "Screen time management",
+            "Customized physical exercises",
+            "Remote medical monitoring"
+          ]
+        },
+        "secondpart": {
+          "title": "How is depression linked to sedentariness?",
+          "first": {
+            "source": "Meta-analysis",
+            "text": [
+              "Sedentariness corresponds to a wakeful situation of sitting or lying down characterized by low energy expenditure. Digital sedentariness includes time spent on smartphones, computers, or in front of the television."
+            ]
+          },
+          "second": {
+            "source": "WHO",
+            "text": [
+              "According to the World Health Organization, it would be possible to stem in Europe",
+              "3.5 million",
+              "cases of",
+              "depression per",
+              "year if one could fight against",
+              "sedentariness."
+            ]
+          },
+          "third": {
+            "source": "Brain Institute",
+            "text": [
+              "In fact,",
+              "Physical activity",
+              "is one of the best endogenous ways to produce",
+              "serotonin",
+              "and",
+              "dopamine,",
+              "two neurotransmitters that help improve the condition of patients with depression."
+            ]
+          }
+        },
+        "thirdpart": {
+          "title": "Digital therapeutic support for everyday life",
+          "first": {
+            "title": "CUSTOMIZED PHYSICAL EXERCISES",
+            "text": "The medical device offers physical exercises validated by smartphone sensors and that follow the recommendations of the High Authority of Health."
+          },
+          "second": {
+            "title": "REMOTE MEDICAL MONITORING",
+            "text": "The doctor ensures remote monitoring of the patient. They send congratulations for progress made and offer support in case of regression."
+          },
+          "third": {
+            "title": "SCREEN MANAGEMENT",
+            "text": "The medical device moderates applications and websites that can be detrimental to the patient's health. The device is cross-platform: it can be installed on all of the patient's screens."
+          },
+          "fourth": {
+            "title": "PERSONALIZED ADVICE",
+            "text": "On a daily basis, the patient benefits from personalized advice to limit depressive symptoms and sedentary behavior."
+          },
+          "button": "Discover the functionality",
+          "order_child": "Order for my child",
+          "order_clinic": "Order for my clinic"
+        },
+        "fourthpart": {
+          "title": "A multidisciplinary scientific team",
+          "text": [
+            "is the result of a meeting between the world of research in",
+            "health",
+            "and in",
+            "education.",
+            "Concerned with the problem of screens associated with depression, our team has dedicated the last four years to developing a solution aimed at improving the quality of life of these individuals.",
+            "Our holistic scientific approach",
+            "allows us to grasp the complexity of mental pathologies in an innovative way: "
+          ],
+          "list": [
+            "Islam EL BOUDI, expert in digital biomarkers",
+            "Dr. Mathilde RIANT, expert in motivational processes",
+            "Dr. Nicolas VUILLERME, expert in e-health"
+          ]
+        },
+        "fifthpart": {
+          "title": "Why use our medical device?",
+          "text": [
+            "Sedentariness greater than 2 hours / day increases the risk of depression by 38 to 46%",
+            "(1).",
+            "Using our medical device allows",
+            "remote management",
+            "of patients who cannot benefit from traditional care and to",
+            "prevent the risk of relapse",
+            "after leaving support due to environmental factors of sedentariness.",
+            "In France, there are high waiting times in Psychological Medical Centers and Hospitals with a psychiatry service",
+            "The average waiting time for outpatient care for adults is 1 to 4 months in 53% of establishments and 5 months to 1 year for children and adolescents in 45% of establishments",
+            "(2).",
+            "Despite the growing number of treatments against depression:",
+            "Persistence of the depressive episode despite at least two successive antidepressant treatments in a third of cases",
+            "(3).",
+            "Risk of relapse despite remission after treatment:",
+            "33% of patients experience a relapse after cognitive-behavioral psychotherapy",
+            "(4)",
+            "and 14.4% after 4 months of remission following pharmacological treatment",
+            "(5)."
+          ]
+        },
+        "sixthpart": {
+          "title": "Our clinical pathway",
+          "subtitle": "Discover all the stages of validation of our medical device...",
+          "first": {
+            "date": "2019",
+            "text": [
+              "Start of",
+              "project"
+            ]
+          },
+          "second": {
+            "date": "2022",
+            "text": [
+              "Pilot study with the",
+              "Rectorate",
+              "of Grenoble and",
+              "Grenoble Alpes University"
+            ]
+          },
+          "third": {
+            "date": "2023",
+            "text": [
+              "Clinical study with",
+              "Grenoble Alpes University Hospital"
+            ]
+          },
+          "fourth": {
+            "date": "2024-2025",
+            "text": [
+              "Multicentric clinical study",
+              "with several University Hospitals"
+            ]
+          },
+          "fifth": {
+            "date": "2026",
+            "text": [
+              "Marking",
+              "medical device"
+            ]
+          }
+        }
+      },
+      "E": {
+        "openModalButton": "Is my teen addicted ?",
+        "title": "We will ask you questions about your child and at the end you will get a score on their screen addiction.",
+        "startButton": "Start",
+        "baremes": {
+          "1": "Never",
+          "2": "Sometimes",
+          "3": "Often",
+          "4": "Always"
+        },
+        "Questions": {
+          "0": "Is he/she preoccupied with screens (thinking about their last use or anticipating the next one) ?",
+          "1": "Does he/she need to use screens for increasingly longer periods of time to achieve satisfaction ?",
+          "2": "Does he/she feel restless, moody, depressed, or irritable when trying to limit or stop their screen use ?",
+          "3": "Has he/she tried unsuccessfully to control, limit, or stop their screen use ?",
+          "4": "Does he/she use screens as a means of escaping problems or to relieve mood disorders (feelings of helplessness, guilt, anxiety, depression) ?"
+        },
+        "emailTitle": "Enter your email and receive your score instantly.",
+        "invalidEmail": "Enter a valid email address",
+        "required": "required",
+        "finishButton": "Done",
+        "successMessage": "Perfect, we have just sent the email with your child's score."
+      },
+      "HPI": {
+        "eighthPart": {
+          "title": "Contacts",
+          "subtitle": "Would you like to receive the latest information on our scientific work?",
+          "text1": "Sign up to our mailing list:",
+          "text2": "10 new spots",
+          "text3": " free ",
+          "text4": "to try our application",
+          "send": "Send"
+        },
+        "sixthPart": {
+          "title": "Our prizes"
+        },
+        "thirdPart": {
+          "title": "They talk about us",
+          "watch": "Watch",
+          "listen": "Listen",
+          "read": "Read"
+        },
+        "head3": "qui aide votre enfant à ",
+        "head4": "gérer",
+        "head5": " son temps d'écrans"
+      },
+      "A": {
+        "bookCallButton": "Book a demo",
+        "head1": "The ",
+        "head2": "educational ",
+        "head3": "application ",
+        "head4": "that truly ",
+        "head5": "protects your child from screens",
+        "subhead": "Automatically sets up parental controls. Offers challenges to unlock video games and social networks.",
+        "iconsText": {
+          "text1": "Multi-screen",
+          "text2": "Adapts to age",
+          "text3": "Protects privacy"
+        },
+        "firstPart": {
+          "title": "Scientifically validated parental control",
+          "text": "is an application resulting from a 3-year research project at the University of Grenoble Alpes. The team is composed of psychologists, researchers, doctors, and engineers in order to build the application based on",
+          "text1": " scientific ",
+          "text2": "results obtained through collaboration with the Rectorate and the University. Our mission is to provide adolescents with the necessary tools to navigate",
+          "text3": " responsibly ",
+          "text4": "in the digital world and to free themselves from omnipresent algorithmic influences."
+        },
+        "secondPart": {
+          "title": "How does it work?",
+          "firstTitle": "install",
+          "firstText": "Download the smartphone application and scan all of your child's devices (tablet, computer, video game console).",
+          "secondTitle": "configure",
+          "secondText": "Let our artificial intelligence find the best settings for your child: categories of sites and applications to block, screen cutoff time, maximum entertainment time per day.",
+          "thirdTitle": "enjoy",
+          "thirdText": "Congratulations! Your child is now protected from inappropriate content. Challenges will be offered to unlock the applications you have configured.",
+          "fourthTitle": "evolve",
+          "fourthText": " is an innovative tool designed to help overcome screen addiction. With the strong presence of screens in our daily lives, whether for work, communication, or entertainment, it has become crucial to maintain a healthy digital lifestyle. By offering challenges outside of screens, the application's restrictions adapt to your child's progress! The more he learns to self-regulate, the less restrictive the application becomes."
+        },
+        "reviewTitle": "Parent's feedback",
+        "reviews": {
+          "1": {
+            "name": "Julien's mom, 9 years old",
+            "problem": "Education",
+            "text": "Thanks to the application, Julien uses his phone much less and remembers to do his homework before going on his screens."
+          },
+          "2": {
+            "name": "Thomas's dad, 13 years old",
+            "problem": "Physical activity",
+            "text": "Thomas is becoming more and more active and loves the outdoor challenges offered by the application."
+          },
+          "3": {
+            "name": "Ilyes's mom, 11 years old",
+            "problem": "Autonomy",
+            "text": "With the restriction modes, Phonix Health controls the categories of applications to be blocked for Ilyes based on his usage."
+          },
+          "4": {
+            "name": "Clément's dad, 14 years old",
+            "problem": "Sociability",
+            "text": "By completing challenges, Clément becomes more and more independent and, above all, less closed off from those around him."
+          }
+        },
+        "bookingModal": {
+          "title": "How would you like to be contacted?",
+          "phone": "Phone",
+          "send": "Send",
+          "or": "OR",
+          "toast": {
+            "success": "Perfect! We will contact you as soon as possible.",
+            "error": {
+              "missingInputTitle": "You have to choose!",
+              "missingInputText": "Phone or Email",
+              "invalidPhoneTitle": "Phone format",
+              "invalidPhoneText": "Your number is not valid, please respect the format."
+            }
+          }
+        }
+      },
+      "toast": {
+        "success": "Perfect, we will contact you as soon as possible.",
+        "warning": "We have received your email, we will contact you as soon as possible.",
+        "error": "Check your email."
+      },
+      "productsPart": {
+        "trialTestTitle": "Cross-platform technology to ",
+        "trialTestTitle1": "diagnose",
+        "trialTestTitle2": "accompany",
+        "trialTestTitle3": "screen addiction",
+        "trialTestText": "Tested on 400 young people aged 10-25.",
+        "productTitle": "Our Technologies",
+        "trialTitle": "What if your phone became your",
+        "trialTitle1": " friend",
+        "trialTitle2": " rather than your enemy ?",
+        "trialText": "Phonix Health propose challenges to unlock video games and social media.",
+        "trialButtonText": "Free download",
+        "title": {
+          "first": "Transform your digital life with our",
+          "second": "technologies",
+          "third": "validated by ",
+          "fourth": "science"
+        },
+        "description": "Improve your mental and physical health with our science-backed digital products. Reduce the risks of digital living with our science-backed products. Transform your digital life with our science-backed products",
+        "forthe": "For the ",
+        "year": " years",
+        "knowMore": "Learn more",
+        "diagText": "psychologists",
+        "careText": "healthcare professionals",
+        "mindText": "adults",
+        "diag": "Understand the impact of screens on the health of your patients.",
+        "care": "A digital therapy to help your patients regain a healthy lifestyle around screens.",
+        "educ": "Discover new activities while learning to use your screens responsibly.",
+        "mind": "Improve your focus and your productivity by reducing digital distractions.",
+        "contactText1": "Test our tools for",
+        "contactText2": " free ",
+        "contactText3": "by participating in our research :",
+        "toastError": "Your email is not valid."
+      },
+      "presentationTitle": "Presentation",
+      "contactModal": {
+        "title": "Have our team contact you",
+        "name": "Name",
+        "prename": "First name",
+        "email": "Email",
+        "why": "Why would you like to be contacted?",
+        "send": "Send"
+      },
+      "card": {
+        "first": "Phonix Health helps you to find a better digital lifestyle.",
+        "last": "Have someone to accompany you :",
+        "emailPlaceholder": "Enter your e-mail",
+        "button": "Schedule a call"
+      },
+      "bandeau1Text": "Partner laboratories",
+      "bandeau2Text": "They support us",
+      "videoSourceText": "Video source: Lumni -Screen addiction: who gets us hooked and how do we quit ?",
+      "firstPart": {
+        "title": "Why is it important to know how to manage your screen time ?",
+        "image1": "More time",
+        "image1.5": "with family",
+        "image2": "More time",
+        "image2.5": "to sleep",
+        "image3": "More time",
+        "image3.5": "for learning"
+      },
+      "secondPart": {
+        "title0.5": "How does",
+        "title": " help you find time away from the screen ?",
+        "text1": "is an innovative tool designed to help repair screen addiction. With the strong presence of screens in our daily lives, whether for work, communication or entertainment, it has become crucial to maintain a healthy digital lifestyle.",
+        "text2": "is The ideal solution for platforms, whether on the phone, tablet, computer, television or consoles, to find a balanced use of screens."
+      },
+      "thirdPart": {
+        "title": "What is screen addiction ?",
+        "text": "Although the term screen addiction is still debated in the research community, it has been established that spending a lot of time in front of screens can have a direct cause on sedentary lifestyle, depression and a lower quality of sleep. Several questionnaires have been developed to diagnose screen addiction.",
+        "text1": " You can take this screen addiction questionnaire yourself by clicking on this link: ",
+        "link": "Survey"
+      }
+    },
+    "dashboard": {
+      "error": "Oops! An error has occurred, try again later.",
+      "buttons": {
+        "challenge": "View challenges",
+        "monitor": "View monitoring",
+        "health": "View health",
+        "notes": "View notes",
+        "params": "Settings",
+        "add": "Add a child"
+      },
+      "token": {
+        "back": "go back",
+        "key": "the user key",
+        "monthAway": "1 month free",
+        "month": "month",
+        "access": "Access to all challenges",
+        "available": "Available on all media",
+        "interface": "Management interface for parents",
+        "activity": "Activity report",
+        "buy": "Buy",
+        "alreadyBought": "Do you already have a user key?"
+      },
+      "dash": {
+        "error": "Oops! An error has occurred, try again later.",
+        "nodatamessages": {
+          "title": "No data for the moment",
+          "pielinechart": "Your screen time statistics will appear here once configured",
+          "sleepdata": "Your sleep statistics will appear here once you have recorded data",
+          "challengedata": "Your challenges will appear here once you start adding them"
+        },
+        "and": "and",
+        "hour": "hours",
+        "noData": "No data at this time",
+        "minute": "minutes",
+        "day": "day",
+        "challenges": {
+          "close": "Close",
+          "send": "Send",
+          "cheat": "Cheated ?",
+          "congrats": "Congratulations on your challenge !",
+          "congratSuccess": "Perfect, we sent your feedback to ",
+          "cheatText": "You cheated !",
+          "challengeChart": {
+            "title": "Chart of Challenges",
+            "yAxis": "Number of Challenges",
+            "noData": "No data at this time"
+          },
+          "challengeTable": {
+            "title": "All challenges",
+            "of": "of",
+            "firstCol": "Emotion",
+            "secondCol": "Challenge Type",
+            "thirdCol": "Date"
+          }
+        },
+        "monitoring": {
+          "more": "See in detail",
+          "table": {
+            "name": "Name",
+            "time": "Time",
+            "usage": "Use for the ",
+            "close": "Close"
+          },
+          "doughnut": {
+            "title": "Usage monitoring for ",
+            "forDay": "yesterday",
+            "forWeek": "the week",
+            "forMonth": "the month",
+            "day": "view yesterday",
+            "week": "view last 7 days",
+            "month": "see last month",
+            "smartphone": "Phone",
+            "desktop": "Desktop",
+            "tablet": "Tablet",
+            "plug": "Console",
+            "usage": "Usage"
+          },
+          "chart": {
+            "details": "Click to see in details",
+            "title": "Evolution of digital leisure time",
+            "iconTitle": "Type Type of digital use",
+            "game": "Video Games",
+            "streaming": "Streaming",
+            "recreatifTime": "Recreational time",
+            "unrecreatifTime": "Non-recreational time",
+            "totalTime": "Total screen time",
+            "social": "Social networks",
+            "work": "Work",
+            "adult": "Website for adults",
+            "other": "Other",
+            "internet": "Internet navigation",
+            "noData": "No data"
+          }
+        },
+        "health": {
+          "chart": {
+            "title": "Digital health",
+            "subTitle": "Time Away from Screens: 24H - (xH in front of screens + xH sleeping)",
+            "topLabel": "Lifestyle Indicator"
+          },
+          "indicator": {
+            "title": "Impact of screens on health"
+          },
+          "scale": {
+            "less": "more than 4 hours",
+            "more": "more than",
+            "title": "Sleep Indicator",
+            "advice": {
+              "title1": "Adivced sleep",
+              "title2": "zone",
+              "lessSleep": "Lack of sleep",
+              "is": "is",
+              "sleepText1": "You have slept",
+              "sleepTextBelow": "per day<b> below</b> of the minimum adviced sleep",
+              "sleepText2": "per day on average this week, which",
+              "correspond": "<b>corresponds to</b>",
+              "sleepText3": "the recommended sleep interval"
+            },
+            "min": "less than",
+            "pus": "more than "
+          }
+        },
+        "params": {
+          "doctor": {
+            "title": "Doctor's settings",
+            "label": "Adapt patient's therapy",
+            "tune_mode": "Tune mode of ",
+            "download": "Download",
+            "pdf": "a track report :",
+            "open": "Open",
+            "notes": "the track notes :",
+            "notes_component": {
+              "title": "Clinical notes ",
+              "placeholder": "Start writing..."
+            }
+          },
+          "firstTitle": "Settings",
+          "firstView": {
+            "title": "Schedule Settings",
+            "description": "Set Week / Weekend / Sleep",
+            "inputLabel0": "Set the ",
+            "inputLabel1": "maximum number / day",
+            "inputLabel2": "of recreational application hours in ",
+            "inputLabel3": "Set from ",
+            "inputLabel4": "from what time ",
+            "inputLabel5": "access to the screens is ",
+            "inputLabel6": "restricted",
+            "inputLabel7": "numeric time",
+            "inputLabel8": " given ",
+            "day": " per day",
+            "week": "week",
+            "weekEnd": "weekend",
+            "button": "Update"
+          },
+          "secondView": {
+            "title": "Unlock a device",
+            "description": "Unlock Smartphone/Tablet/Desktop/Plug",
+            "cheat": " cheat mode",
+            "unlock": "Unlock",
+            "unlockTime": " time on the devices ",
+            "lock": "Lock",
+            "phone": "Smartphone",
+            "tablet": "Tablet",
+            "desktop": "Desktop",
+            "plug": "Plug"
+          },
+          "thirdView": {
+            "title": "Category Settings",
+            "description": "Adjust Blocking Intensity",
+            "social": "Social Networks",
+            "gaming": "Video Games",
+            "streaming": "Streaming",
+            "adult": "Website - 18",
+            "weakLevel": {
+              "title": "Weak",
+              "description": "will be available in ",
+              "permanent": "permanence."
+            },
+            "mediumLevel": {
+              "title": "Medium",
+              "description": "will be available ",
+              "only": "only",
+              "description1": " if challenges will be completed."
+            },
+            "strongLevel": {
+              "title": "Strong",
+              "description": "will ",
+              "never": "no longer be",
+              "description1": " available."
+            },
+            "toast": {
+              "title": "Block Intensity Change",
+              "chosen": "This level is already chosen!",
+              "success": "Restriction change made successfully.",
+              "error": "An error occurred, try again later."
+            },
+            "modalTitleTO": "to",
+            "modalTitle": "Are you sure to change the category level"
+          },
+          "Smartphone": {
+            "title": "List of applications",
+            "add": "Add",
+            "search": "Find a blocked app",
+            "web": "Website name",
+            "firstCol": "App name",
+            "secondCol": " Available with digital time",
+            "thirdCol": "Never available",
+            "fourthCol": "Unlock"
+          },
+          "noApps": {
+            "Smartphone": "is not yet installed on the phone.",
+            "Tablet": "is not yet installed on the tablet.",
+            "Computer": "is not yet installed on the computer."
+          },
+          "blockToast": {
+            "noApp": "No app selected",
+            "title": "App Blocking",
+            "Level1": "You have successfully unlocked the application.",
+            "Level2": "You have successfully blocked the application based on the digital time.",
+            "Level3": "You have successfully blocked the application."
+          },
+          "addApp": {
+            "noWeb": "No website selected",
+            "noApp": "No app selected",
+            "title": "Block",
+            "subtitle": "All Apps",
+            "toast": {
+              "title": "Application blocking",
+              "missingInput": "You must choose an application",
+              "missingLevel": "You must choose the blocking level",
+              "successL2": "Perfect , you have blocked the app based on digital time.",
+              "successL3": "Perfect, you have blocked the app."
+            }
+          },
+          "toast": {
+            "success": "You have successfully updated the settings",
+            "errorTitle": "Error",
+            "appError": "You must choose an existing app.",
+            "title": "Update",
+            "addError": "You must choose to block or allow.",
+            "error": "An error has occurred, we'll take care of it!",
+            "validation": "numbers must be between 0 and 24"
+          },
+          "secondTitle": "Device Settings",
+          "app": "App",
+          "web": "Website",
+          "website": "Website Settings",
+          "websiteDescription": "Authorize or block websites",
+          "websiteTitle": "List of web sites",
+          "websitePlaceholder": "Search a blocked website",
+          "phoneDescription": "Authorize or block applications",
+          "desktopDescription": "Authorize or block Softwares",
+          "phone": "Smatphone settings",
+          "tablet": "Tablet settings",
+          "desktop": "Desktop settings",
+          "addOrBlock": "Do you want to authorize or block the ",
+          "addOrBlockApp": "Do you want to authorize or block the App.",
+          "your": "Categories",
+          "apps": "Apps",
+          "one": "a",
+          "one1": "a",
+          "auth": "Authorize",
+          "deny": "Forbid",
+          "authorized": "authorized",
+          "denyed": "blocked",
+          "none": "No",
+          "subs": "registred",
+          "soft": "Software",
+          "add": "Add",
+          "view": "View",
+          "addApps": "an application",
+          "viewApps": "all applications",
+          "addWeb": "a Site",
+          "addSoft": "a Software",
+          "viewWeb": "all sites",
+          "viewSoft": "all software",
+          "modalText": "Do you want to delete this ",
+          "deleteSuccess": "You successfully deleted the  ",
+          "addSuccess": "You just added the ",
+          "addSuccess1": "to your list."
+        }
+      },
+      "welcomefirst": "Welcome",
+      "welcomelast": "to your dashboard",
+      "kidcard": {
+        "associate": "Associate",
+        "search": "Search",
+        "name": "Name",
+        "Objectif": "Objective",
+        "key": "Key",
+        "keyText": "You haven't used this user key yet",
+        "addKid": "Add a child",
+        "addKidText1": "Add a child by generating a new",
+        "addKidText2": "user key",
+        "age": "Age",
+        "year": "years old",
+        "therapy": "therapy",
+        "observ": "observation",
+        "access": "Access",
+        "download": "Download",
+        "associateModalText": "You are going to associate the desktop session to the account of ",
+        "deleteModal": {
+          "title": "Are you sure ?",
+          "text": "You are going to delete the account of ",
+          "textReactive": "You are going to reactivate the account of ",
+          "putMDP": "Enter your password.",
+          "ReputMDP": "Your need to enter your password.",
+          "yes": "Yes",
+          "no": "No"
+        },
+        "toast": {
+          "deleted": "You just deleted the account of ",
+          "perfect": "Perfect !",
+          "noChange": "Nothing changed.",
+          "activated": "You just activated the account of ",
+          "associated": "You just associated the account of ",
+          "session": " to the session"
+        },
+        "notes_link": {
+          "no_link": "No link mentionned yet.",
+          "error_displaying": "Sorry, the provided link is invalid or the content could not be loaded.",
+          "placeholder": "Google Docs Link",
+          "add": {
+            "no_changes": "The Google Docs Link did not change.",
+            "success": "Google Docs Link added with success.",
+            "error": "Problem adding Google Docs Link.",
+            "invalid": "This is not a valid link."
+          },
+          "undo": {
+            "success": "Google Docs Link put back with success.",
+            "error": "Problème re-adding Google Docs Link."
+          },
+          "delete": {
+            "success": "Google Docs Link deleted with success.",
+            "error": "Problem deleting Google Docs Link."
+          }
+        }
+      }
+    },
+    "navbar": {
+      "buttons": {
+        "forum": "Forums",
+        "products": "Products",
+        "research": "Join the study",
+        "article": "News",
+        "account": "My account",
+        "kids": "All Kids",
+        "logout": "Logout",
+        "download": "Download",
+        "login": "Login",
+        "contact": "Contact-us",
+        "us": "Our team",
+        "landing": "Presentation",
+        "test": ""
+      }
+    }
+  },
+  "pdf": {
+    "title": "Phonix Health Report",
+    "age": "years.",
+    "produced": "Produced on",
+    "Smartphone": "Smartphone",
+    "Computer": "Computer",
+    "Tablet": "Tablet",
+    "Plug": "Console",
+    "hour": "hour",
+    "minute": "minute",
+    "day": "day",
+    "and": "and",
+    "lineChart": {
+      "title": "Evolution of Digital Leisure Time",
+      "totalTime": "Total Time",
+      "recreatifTime": "Video Games / Streaming / Social Media / Adult Websites",
+      "averageTotalTime": "Average total time for the age group of",
+      "averageRecreatifTime": "Average recreational time for the age group of",
+      "timeMajorilySpent": "Your total time is mainly spent on:"
+    },
+    "generalDoughnutChart": {
+      "title": "Weekly Usage Tracking",
+      "recreatifTime": "Recreational Time",
+      "unrecreatifTime": "Non-Recreational Time",
+      "averageTotalTime": "Average screen time: ",
+      "recreatifTimeText": " of your screen time is spent on recreational applications, which averages to ",
+      "unrecreatifTimeText": " of your screen time is spent on non-recreational applications, which averages to "
+    },
+    "sleepGraph": {
+      "title": "Sleep Estimation",
+      "text": "Based on the data of ",
+      "device": "your device",
+      "devices": "your devices",
+      "restOfText": ", we estimate that you sleep an average of",
+      "whichis": "which is",
+      "over": " above",
+      "under": " below",
+      "ofAdvicedTime": "the recommended time for your age."
+    },
+    "detailedDoughnutChart": {
+      "title": "Detailed Weekly Usage Tracking",
+      "recreatifTime": "Your recreational usage consists of: ",
+      "unrecreatifTime": "Your non-recreational usage consists of: ",
+      "other": "Other",
+      "game": "Video Games",
+      "social": "Social Media",
+      "internet": "Internet Browsing",
+      "work": "Work",
+      "streaming": "Streaming",
+      "adult": "Adult Websites"
+    },
+    "radarChart": {
+      "title": "Impact of Screens on Health",
+      "analyzeText": "According to our analysis, your screen usage is primarily correlated with a high score in: ",
+      "adviceText": "Intensive screen usage can be correlated with an anxio-depressive score due to various factors. Social media and online gaming can create an environment of constant social comparison, generating feelings of dissatisfaction and inadequacy, which can worsen anxiety and depression. The impact on sleep is also a key factor as screen usage before bedtime disrupts the production of melatonin, promoting insomnia and sleep problems, which are often linked to anxio-depressive disorders. Additionally, the sedentary lifestyle associated with excessive screen use and relying on screens as an escape can also worsen anxious and depressive symptoms. The therapy you will undergo will help you find a healthy balance in your screen usage and take care of your mental and emotional well-being by diversifying your activities and promoting real social interactions."
+    },
+    "contact": "For more information, please contact us at the following address: "
+  }
+}
