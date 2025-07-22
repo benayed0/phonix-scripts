@@ -35,7 +35,9 @@ export class I18nService {
 
       return { success: true };
     } catch (error) {
-      return { success: true, error };
+      console.log(error);
+
+      return { success: false, error };
     }
   }
 }
