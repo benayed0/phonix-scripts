@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
+import { S3Service } from '../s3/s3.service';
 
 export interface UpdateLangDto {
   path: string;
@@ -9,26 +10,11 @@ export interface UpdateLangDto {
 
 @Injectable()
 export class I18nService {
-  updateLang(lang: string, data: UpdateLangDto) {
+  constructor(private s3Service: S3Service) {}
+  async updateLang(lang: string, data: UpdateLangDto) {
     const { path, value } = data;
     try {
-      const filePath = join(
-        __dirname,
-        '..',
-        '..',
-        '..',
-        'assets',
-        'i18n',
-        `${lang}.json`,
-      );
-      console.log(filePath);
-
-      if (!existsSync(filePath)) {
-        throw new Error(`Language file ${lang}.json does not exist`);
-      }
-
-      const content = JSON.parse(readFileSync(filePath, 'utf-8'));
-
+      const content = await this.s3Service.getLang(lang);
       // Walk the path and assign the value
       const keys = path.split('.');
       let current = content;
@@ -41,8 +27,8 @@ export class I18nService {
 
       current[keys[keys.length - 1]] = value;
 
-      writeFileSync(filePath, JSON.stringify(content, null, 2), 'utf-8');
-
+      const updated = JSON.stringify(content, null, 2);
+      await this.s3Service.updateLang(lang, updated);
       return { success: true };
     } catch (error) {
       console.log(error);
