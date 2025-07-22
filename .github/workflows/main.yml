@@ -21,6 +21,7 @@ jobs:
           script: |
             cd /home/ubuntu/phonix-scripts/
             git pull origin main
+            sudo lsof -ti tcp:3000 | xargs -r sudo kill -9
             docker build -t phonix-scripts .
             docker stop phonix-scripts || true
             docker rm phonix-scripts || true
