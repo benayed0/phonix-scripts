@@ -9,10 +9,22 @@ import { JobsService } from './services/jobs/jobs.service';
 import { I18nController } from './controllers/i18n/i18n.controller';
 import { I18nService } from './services/i18n/i18n.service';
 import { S3Service } from './services/s3/s3.service';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
-  imports: [ConfigModule.forRoot({ cache: true }), FirebaseModule],
+  imports: [
+    ConfigModule.forRoot({ cache: true }),
+    ScheduleModule.forRoot(),
+    FirebaseModule,
+  ],
   controllers: [AppController, I18nController],
-  providers: [AppService, ScraperService, LlmService, JobsService, I18nService, S3Service],
+  providers: [
+    AppService,
+    ScraperService,
+    LlmService,
+    JobsService,
+    I18nService,
+    S3Service,
+  ],
 })
 export class AppModule {}

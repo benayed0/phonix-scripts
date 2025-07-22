@@ -13,11 +13,7 @@ export class S3Service {
   client = new S3Client({
     region: 'eu-west-3', // e.g., 'eu-west-1'
   });
-  constructor() {
-    this.getLang('fr').then((res) => {
-      console.log(res);
-    });
-  }
+  constructor() {}
   async getLang(lang: string) {
     const key = `${lang}.json`;
 

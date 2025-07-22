@@ -2,18 +2,21 @@ import { Injectable, OnModuleInit } from '@nestjs/common';
 import { FirebaseService } from '../firebase/firebase.service';
 import { ScraperService } from '../scraper/scraper.service';
 import { LlmService } from '../llm/llm.service';
+import { Cron, CronExpression } from '@nestjs/schedule';
 
 @Injectable()
-export class JobsService implements OnModuleInit {
+export class JobsService {
   constructor(
     private firebase: FirebaseService,
     private scrapper: ScraperService,
     private llm: LlmService,
   ) {}
-  async onModuleInit() {
+
+  @Cron(CronExpression.EVERY_DAY_AT_4AM)
+  async handleCron() {
     await this.processUncuratedWebsitesBatch();
-    this.firebase.listenToUncuratedChanges(this.processWebsite.bind(this));
   }
+
   async processWebsite(url: string) {
     const category = await this.getWebsiteCategory(url);
     await this.appendWebsite(url, category);

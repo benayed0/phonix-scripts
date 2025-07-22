@@ -12,6 +12,8 @@ export interface UpdateLangDto {
 export class I18nService {
   constructor(private s3Service: S3Service) {}
   async updateLang(lang: string, data: UpdateLangDto) {
+    console.log('updating', lang);
+
     const { path, value } = data;
     try {
       const content = await this.s3Service.getLang(lang);
@@ -31,8 +33,6 @@ export class I18nService {
       await this.s3Service.updateLang(lang, updated);
       return { success: true };
     } catch (error) {
-      console.log(error);
-
       return { success: false, error };
     }
   }
