@@ -17,6 +17,7 @@ export class I18nController {
       'i18n',
       `${lang}.json`,
     );
+    console.log(filePath);
 
     if (!existsSync(filePath)) {
       return res

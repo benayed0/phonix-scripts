@@ -12,7 +12,17 @@ export class I18nService {
   updateLang(lang: string, data: UpdateLangDto) {
     const { path, value } = data;
     try {
-      const filePath = join(__dirname, '..', 'assets', 'i18n', `${lang}.json`);
+      const filePath = join(
+        __dirname,
+        '..',
+        '..',
+        '..',
+        'assets',
+        'i18n',
+        `${lang}.json`,
+      );
+      console.log(filePath);
+
       if (!existsSync(filePath)) {
         throw new Error(`Language file ${lang}.json does not exist`);
       }
