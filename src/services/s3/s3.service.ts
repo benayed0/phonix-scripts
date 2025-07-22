@@ -6,20 +6,29 @@ import {
 import { Injectable } from '@nestjs/common';
 import { Readable } from 'stream';
 import { UpdateLangDto } from '../i18n/i18n.service';
+import {
+  CloudFrontClient,
+  CreateInvalidationCommand,
+  ListCachePoliciesCommand,
+} from '@aws-sdk/client-cloudfront';
 
 @Injectable()
 export class S3Service {
   bucket = 'phonixhealth.i18n';
-  client = new S3Client({
-    region: 'eu-west-3', // e.g., 'eu-west-1'
+  region = 'eu-west-3';
+  cloudfrontId = 'E2J84C1SAM4SVY';
+  s3Client = new S3Client({
+    region: this.region, // e.g., 'eu-west-1'
   });
+  cloudfrontClient = new CloudFrontClient({ region: this.region });
+
   constructor() {}
   async getLang(lang: string) {
     const key = `${lang}.json`;
 
     // Step 1: Download the file
     const getCommand = new GetObjectCommand({ Bucket: this.bucket, Key: key });
-    const { Body } = await this.client.send(getCommand);
+    const { Body } = await this.s3Client.send(getCommand);
     const jsonString = await this.streamToString(Body as Readable);
     const content = JSON.parse(jsonString);
     return content;
@@ -43,7 +52,20 @@ export class S3Service {
       ContentType: 'application/json',
     });
 
-    await this.client.send(putCommand);
+    await this.s3Client.send(putCommand);
+
+    await this.cloudfrontClient.send(
+      new CreateInvalidationCommand({
+        DistributionId: this.cloudfrontId,
+        InvalidationBatch: {
+          CallerReference: `${Date.now()}`,
+          Paths: {
+            Quantity: 1,
+            Items: [`/${lang}.json`],
+          },
+        },
+      }),
+    );
     return { success: true };
   }
 }
