@@ -8,12 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: phonix-scripts # <-- This is crucial
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      - name: Debug: Check if SSH key is passed
+        run: |
+          echo "${{ secrets.EC2_SSH_KEY }}" | head -n 5
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
