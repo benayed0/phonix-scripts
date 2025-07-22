@@ -6,10 +6,12 @@ import { FirebaseModule } from './firebase/firebase.module';
 import { ScraperService } from './services/scraper/scraper.service';
 import { LlmService } from './services/llm/llm.service';
 import { JobsService } from './services/jobs/jobs.service';
+import { I18nController } from './controllers/i18n/i18n.controller';
+import { I18nService } from './services/i18n/i18n.service';
 
 @Module({
   imports: [ConfigModule.forRoot({ cache: true }), FirebaseModule],
-  controllers: [AppController],
-  providers: [AppService, ScraperService, LlmService, JobsService],
+  controllers: [AppController, I18nController],
+  providers: [AppService, ScraperService, LlmService, JobsService, I18nService],
 })
 export class AppModule {}
