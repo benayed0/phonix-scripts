@@ -11,23 +11,23 @@ export interface UpdateLangDto {
 @Injectable()
 export class I18nService {
   constructor(private s3Service: S3Service) {}
-  async updateLang(lang: string, data: UpdateLangDto) {
+  async updateLang(lang: string, data: UpdateLangDto[]) {
     console.log('updating', lang);
-
-    const { path, value } = data;
     try {
       const content = await this.s3Service.getLang(lang);
-      // Walk the path and assign the value
-      const keys = path.split('.');
-      let current = content;
+      for (const { path, value } of data) {
+        // Walk the path and assign the value
+        const keys = path.split('.');
+        let current = content;
 
-      for (let i = 0; i < keys.length - 1; i++) {
-        const key = keys[i];
-        if (!current[key]) current[key] = {};
-        current = current[key];
+        for (let i = 0; i < keys.length - 1; i++) {
+          const key = keys[i];
+          if (!current[key]) current[key] = {};
+          current = current[key];
+        }
+
+        current[keys[keys.length - 1]] = value;
       }
-
-      current[keys[keys.length - 1]] = value;
 
       const updated = JSON.stringify(content, null, 2);
       await this.s3Service.updateLang(lang, updated);

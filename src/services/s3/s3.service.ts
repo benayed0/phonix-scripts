@@ -1,4 +1,5 @@
 import {
+  DeleteObjectCommand,
   GetObjectCommand,
   PutObjectCommand,
   S3Client,
@@ -11,18 +12,107 @@ import {
   CreateInvalidationCommand,
   ListCachePoliciesCommand,
 } from '@aws-sdk/client-cloudfront';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class S3Service {
+  constructor(private config: ConfigService) {}
   bucket = 'phonixhealth.i18n';
+  backup_bucket = 'phonix';
   region = 'eu-west-3';
   cloudfrontId = 'E2J84C1SAM4SVY';
   s3Client = new S3Client({
     region: this.region, // e.g., 'eu-west-1'
   });
+  ovhClient = new S3Client({
+    region: 'sbg', // OVH region
+    endpoint: 'https://s3.sbg.io.cloud.ovh.net', // OVH endpoint
+    credentials: {
+      accessKeyId: this.config.get('OVH_S3_ACCES_KEY'),
+      secretAccessKey: this.config.get('OVH_S3_SECRET_KEY'),
+    },
+    forcePathStyle: true, // 🔑 très important pour compatibilité OVH
+  });
+
   cloudfrontClient = new CloudFrontClient({ region: this.region });
 
-  constructor() {}
+  async getFirebaseDB(name: string) {
+    try {
+      const key = `backup/firebase/${name}.json`;
+      const putCommand = new GetObjectCommand({
+        Bucket: this.backup_bucket,
+        Key: key,
+        ResponseContentType: 'application/json',
+      });
+
+      const response = await this.ovhClient.send(putCommand);
+      const stream = response.Body as Readable;
+      const jsonString = await this.streamToString(stream);
+      const content = JSON.parse(jsonString);
+      return content;
+    } catch (error) {
+      return null;
+    }
+  }
+  async getMongoDB(name: string) {
+    try {
+      const key = `backup/mongo/${name}.json`;
+      const putCommand = new GetObjectCommand({
+        Bucket: this.backup_bucket,
+        Key: key,
+        ResponseContentType: 'application/json',
+      });
+
+      const response = await this.ovhClient.send(putCommand);
+      const stream = response.Body as Readable;
+      const jsonString = await this.streamToString(stream);
+      const content = JSON.parse(jsonString);
+      return content;
+    } catch (error) {
+      return null;
+    }
+  }
+  async uploadFirebaseDB(name: string, data: any) {
+    const key = `backup/firebase/${name}.json`;
+    const putCommand = new PutObjectCommand({
+      Bucket: this.backup_bucket,
+      Key: key,
+      Body: JSON.stringify(data),
+      ContentType: 'application/json',
+    });
+
+    await this.ovhClient.send(putCommand);
+  }
+  async deleteFirebaseDB(name: string) {
+    const key = `backup/firebase/${name}.json`;
+    const putCommand = new DeleteObjectCommand({
+      Bucket: this.backup_bucket,
+      Key: key,
+    });
+
+    await this.ovhClient.send(putCommand);
+  }
+  async deleteMongoDB(name: string) {
+    const key = `backup/mongo/${name}.json`;
+    const putCommand = new DeleteObjectCommand({
+      Bucket: this.backup_bucket,
+      Key: key,
+    });
+
+    await this.ovhClient.send(putCommand);
+  }
+  async uploadMongoDB(name: string, data: any) {
+    const key = `backup/mongo/${name}.json`;
+    const putCommand = new PutObjectCommand({
+      Bucket: this.backup_bucket,
+      Key: key,
+      Body: JSON.stringify(data),
+      ContentType: 'application/json',
+    });
+    console.log('Uploading MongoDB backup:', key);
+
+    await this.ovhClient.send(putCommand);
+  }
   async getLang(lang: string) {
     const key = `${lang}.json`;
 

@@ -13,6 +13,9 @@ export class FirebaseService {
     this.#websiteCollection = this.#db.collection('uncurated_websites');
     this.#rtdb = firebaseApp.database(); // ✅ RTDB instance
   }
+  getRef(path: string) {
+    return this.#rtdb.ref(path);
+  }
   async removeWebsitesFromFirestore(urls: string[]): Promise<void> {
     if (!urls.length) return;
 

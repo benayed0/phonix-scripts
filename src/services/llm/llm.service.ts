@@ -82,4 +82,33 @@ ${content}
     const { response } = await this.askAi(prompt);
     return response;
   }
+
+  async sendPhotoToGPT(prompt: string, image_url: string) {
+    const response = await this.client.chat.completions.create({
+      model: 'gpt-4-vision-preview',
+      messages: [
+        {
+          role: 'user',
+          content: [
+            {
+              type: 'text',
+              text: prompt,
+            },
+            {
+              type: 'image_url',
+              image_url: {
+                url: image_url,
+              },
+            },
+          ],
+        },
+      ],
+      temperature: 0,
+      max_tokens: 700,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
+    });
+    return response;
+  }
 }

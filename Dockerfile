@@ -27,7 +27,7 @@ RUN npm install
 
 # Copy full app codebase
 COPY . .
-
+ENV PORT=3000
 # Build NestJS
 RUN npm run build
 
