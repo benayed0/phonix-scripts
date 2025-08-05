@@ -13,6 +13,8 @@ export class I18nService {
   constructor(private s3Service: S3Service) {}
   async updateLang(lang: string, data: UpdateLangDto[]) {
     console.log('updating', lang);
+    console.log('data:', data);
+
     try {
       const content = await this.s3Service.getLang(lang);
       for (const { path, value } of data) {

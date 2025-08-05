@@ -27,7 +27,7 @@ export class I18nController {
     return res.sendFile(filePath);
   }
   @Put(':lang')
-  updatelang(@Param('lang') lang: string, @Body() data: UpdateLangDto) {
+  updatelang(@Param('lang') lang: string, @Body() data: UpdateLangDto[]) {
     return this.i18nService.updateLang(lang, data);
   }
 }
