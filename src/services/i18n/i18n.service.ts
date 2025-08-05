@@ -33,6 +33,8 @@ export class I18nService {
       await this.s3Service.updateLang(lang, updated);
       return { success: true };
     } catch (error) {
+      console.log(error);
+
       return { success: false, error };
     }
   }
