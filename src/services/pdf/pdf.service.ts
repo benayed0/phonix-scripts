@@ -9,19 +9,19 @@ export class PdfService {
     const doc = new PDFDocument({ size: 'A4' });
     doc.pipe(stream);
 
-    const pageWidth = doc.page.width;
-    const pageHeight = doc.page.height;
-    const marginX = 50;
-    const marginY = 50;
-    const qrSize = 100;
-    const labelHeight = 20;
-    const boxWidth = 150;
-    const boxHeight = 150;
+    const pageWidth = doc.page.width; // A4 = 595pts
+    const pageHeight = doc.page.height; // A4 = 842pts
+    const marginX = 25;
+    const marginY = 30;
+    const qrSize = 95; // Larger QR codes
+    const labelHeight = 16;
+    const boxWidth = 109; // (595 - 50) / 5 = 109pts per column
+    const boxHeight = 145; // (842 - 60) / 5 = 156pts per row, using 145
 
-    // Calculate how many QR codes fit per row and per page
-    const qrPerRow = Math.floor((pageWidth - 2 * marginX) / boxWidth);
-    const rowsPerPage = Math.floor((pageHeight - 2 * marginY) / boxHeight);
-    const qrPerPage = qrPerRow * rowsPerPage;
+    // Optimized layout: 5 columns × 5 rows = 25 per page
+    const qrPerRow = 5;
+    const rowsPerPage = 5;
+    const qrPerPage = qrPerRow * rowsPerPage; // 25 per page
 
     console.log(
       `Layout: ${qrPerRow} per row, ${rowsPerPage} rows per page, ${qrPerPage} per page`,
@@ -79,6 +79,7 @@ export class PdfService {
           });
       }
     }
+
     doc.end();
     return stream;
   }
