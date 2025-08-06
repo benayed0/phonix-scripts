@@ -21,6 +21,9 @@ import {
   ChallengesImagesSchema,
 } from './schemas/challengesImages/challengesImages.schema';
 import { User, UserSchema } from './schemas/user/user.schema';
+import { QrService } from './services/qr/qr.service';
+import { PdfService } from './services/pdf/pdf.service';
+import { QrController } from './controllers/qr/qr.controller';
 
 @Module({
   imports: [
@@ -40,7 +43,7 @@ import { User, UserSchema } from './schemas/user/user.schema';
       { name: User.name, schema: UserSchema },
     ]),
   ],
-  controllers: [AppController, I18nController],
+  controllers: [AppController, I18nController, QrController],
   providers: [
     AppService,
     ScraperService,
@@ -52,6 +55,8 @@ import { User, UserSchema } from './schemas/user/user.schema';
     JobUserService,
     JobBackupService,
     MailService,
+    QrService,
+    PdfService,
   ],
 })
 export class AppModule {}
