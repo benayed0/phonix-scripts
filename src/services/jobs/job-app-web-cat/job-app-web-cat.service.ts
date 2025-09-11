@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { All, Injectable } from '@nestjs/common';
 import { FirebaseService } from 'src/services/firebase/firebase.service';
 import { LlmService } from 'src/services/llm/llm.service';
 import { ScraperService } from 'src/services/scraper/scraper.service';
@@ -71,11 +71,14 @@ export class JobAppWebCatService {
     console.log('\n🔍 [Start] Processing all uncurated websites...\n');
 
     const curated = await this.firebase.getUncuratedWebsites();
-
+    const current = await this.firebase.getCuratedWebsites();
+    const exisiting = Object.values(current).flat();
     const newState: Record<string, Set<string>> = {};
 
     for (const url of curated) {
       if (!url) continue;
+      if (exisiting.includes(url)) continue;
+
       const newCategory = await this.getWebsiteCategory(url);
       if (!newState[newCategory]) {
         newState[newCategory] = new Set();
@@ -84,7 +87,6 @@ export class JobAppWebCatService {
     }
 
     // 1. Fetch full current state
-    const current = await this.firebase.getCuratedWebsites();
 
     // 2. Build the new final state: clean all previous category mentions
     const final: Record<string, string[]> = {};
@@ -191,11 +193,24 @@ export class JobAppWebCatService {
       'Processing uncurated apps...',
       Object.keys(AllApps.UncuratedPackages).length,
     );
-
+    const curatedApps = [
+      'GamingPackages',
+      'AdultPackages',
+      'InternetPackages',
+      'StreamingPackages',
+      'SocialPackages',
+      'WorkingPackages',
+      'OtherPackages',
+      'SystemPackages',
+    ].flatMap((key) => Object.values(AllApps[key as keyof typeof AllApps]));
     for (let i = 0; i < AllApps.UncuratedPackages.length; i++) {
       const packname = AllApps.UncuratedPackages[i];
       console.log(`Processing item : ${i}`);
-
+      if (curatedApps.includes(packname)) {
+        AllApps.UncuratedPackages.splice(i, 1);
+        console.log('Found duplicate', packname);
+        continue;
+      }
       if (packname) {
         const appname = await this.getname(packname);
         if (appname) {
@@ -282,7 +297,14 @@ export class JobAppWebCatService {
     // appref.ref.set(apps);
   }
   async getname(packname: string) {
+    //TODO check with llm
     const url = `https://play.google.com/store/apps/details?id=${packname.replace(/_/g, '.')}&hl=FR&gl=US`;
+    const content = await this.scrapper.getWebsite(url);
+    const category = await this.llm.getAppCategory(packname, content);
+    if (category !== 'unknown') {
+      return category;
+    }
+    return false;
     try {
       const $ = cheerio.load((await lastValueFrom(this.http.get(url))).data);
       const app_title = $('h1[itemprop="name"]').text().trim();

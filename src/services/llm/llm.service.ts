@@ -52,6 +52,40 @@ ${domain}
     return response;
   }
 
+  async getAppCategory(appName: string, content: string): Promise<string> {
+    const prompt = `
+    You are an expert classifier.
+
+Your job is to classify **Android apps and their websites** into one of the following categories.  
+If you're uncertain or the data lacks enough signal, return "other".
+
+Categories:
+- adult: sexually explicit or NSFW material
+- gaming: online games or game-related content
+- internet: General internet tools and services such as browsers, search engines, VPNs, download managers.
+- social: social media platforms or forums (e.g., Facebook, Reddit, Instagram, TikTok)
+- streaming: online video/audio platforms (e.g., Netflix, YouTube, Spotify)
+-	working: productivity, office, and utility apps (e.g., PDF readers/editors, document scanners, note-taking, cloud storage, office suites, calendars, task managers)
+- system: System utilities, pre-installed services, device managers, or core OS components (e.g., Android system apps, settings, drivers).
+- other: if it clearly does not fit any of the above
+
+Analyze the following information and return **only** a strict JSON object with this format:  
+\`\`\`json
+{ "response": "category_name" }
+\`\`\`
+
+Android app name: ${appName}
+
+Website content:
+"""
+${content}
+"""
+  `;
+
+    const { response } = await this.askAi(prompt);
+    return response;
+  }
+
   async getWebsiteCategory(url: string, content: string): Promise<string> {
     const prompt = `
     You are an expert web classifier.
