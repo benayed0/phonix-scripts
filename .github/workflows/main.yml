@@ -19,10 +19,16 @@ jobs:
           username: ${{ secrets.EC2_SSH_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/phonix-scripts/
-            git pull origin main
+            cd /home/ubuntu/phonix-scripts/                      
+            git fetch origin main
+            git reset --hard origin/main   # ✅ force to latest commit
+            git clean -fd                  # ✅ remove untracked files (avoids stale dist/)
+
+            # Optional: check commit hash for debugging
+            git rev-parse HEAD
+
+            docker build --no-cache -t phonix-scripts .
             sudo lsof -ti tcp:3000 | xargs -r sudo kill -9
-            docker build -t phonix-scripts .
             docker stop phonix-scripts || true
             docker rm phonix-scripts || true
             docker run \
