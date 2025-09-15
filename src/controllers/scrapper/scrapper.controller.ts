@@ -8,6 +8,8 @@ export class ScrapperController {
 
   @Post('check')
   checkHostname(@Body('hostname') hostname: string) {
+    console.log('categorizing', hostname);
+
     return this.jobs.processWebsite(hostname);
   }
 }
