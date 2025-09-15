@@ -24,6 +24,7 @@ import { User, UserSchema } from './schemas/user/user.schema';
 import { QrService } from './services/qr/qr.service';
 import { PdfService } from './services/pdf/pdf.service';
 import { QrController } from './controllers/qr/qr.controller';
+import { ScrapperController } from './controllers/scrapper/scrapper.controller';
 
 @Module({
   imports: [
@@ -43,7 +44,12 @@ import { QrController } from './controllers/qr/qr.controller';
       { name: User.name, schema: UserSchema },
     ]),
   ],
-  controllers: [AppController, I18nController, QrController],
+  controllers: [
+    AppController,
+    I18nController,
+    QrController,
+    ScrapperController,
+  ],
   providers: [
     AppService,
     ScraperService,

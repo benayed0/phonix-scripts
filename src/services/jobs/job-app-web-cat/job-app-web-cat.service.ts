@@ -15,8 +15,13 @@ export class JobAppWebCatService {
     private http: HttpService,
   ) {}
   async processWebsite(url: string) {
-    const category = await this.getWebsiteCategory(url);
-    await this.appendWebsite(url, category);
+    try {
+      const category = await this.getWebsiteCategory(url);
+      await this.appendWebsite(url, category);
+      return { success: true };
+    } catch (error) {
+      return { success: false, error };
+    }
   }
   async appendWebsite(url: string, category: string): Promise<void> {
     // 1. Fetch current state from Realtime DB
