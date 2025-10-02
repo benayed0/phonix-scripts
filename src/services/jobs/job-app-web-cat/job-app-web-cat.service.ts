@@ -59,8 +59,8 @@ export class JobAppWebCatService {
     if (category === 'unknown') {
       const websiteContent = await this.scrapper.getWebsite(url);
       if (!websiteContent || websiteContent.trim() === '') {
-        console.warn(`❌ Skipping (no content): ${url}, adding to other`);
-        category = 'other';
+        console.warn(`❌ Skipping (no content): ${url}, adding to Uncurated`);
+        category = 'Uncurated';
       } else {
         category = await this.llm.getWebsiteCategory(url, websiteContent);
         if (category === 'unknown') {
@@ -80,16 +80,28 @@ export class JobAppWebCatService {
     const exisiting = Object.values(current).flat();
     const newState: Record<string, Set<string>> = {};
 
+    console.log(`Total uncurated websites: ${curated.length}`);
+    let processedCount = 0;
+
     for (const url of curated) {
       if (!url) continue;
-      if (exisiting.includes(url)) continue;
+      if (exisiting.includes(url)) {
+        console.log(`⏩ [Skipped] Already categorized: ${url}`);
+        continue;
+      }
 
+      console.log(`🔎 [Processing] ${url}`);
       const newCategory = await this.getWebsiteCategory(url);
+      console.log(`➡️ [Categorized] "${url}" as "${newCategory}"`);
+
       if (!newState[newCategory]) {
         newState[newCategory] = new Set();
       }
       newState[newCategory].add(url);
+      processedCount++;
     }
+
+    console.log(`\n📝 [Summary] Processed ${processedCount} new websites.`);
 
     // 1. Fetch full current state
 
@@ -100,6 +112,9 @@ export class JobAppWebCatService {
       final[category] = urls.filter(
         (url) => !Object.values(newState).some((set) => set.has(url)), // remove if it's going to be moved
       );
+      if (final[category].length !== urls.length) {
+        console.log(`🧹 [Cleaned] Removed moved URLs from "${category}"`);
+      }
     }
 
     // 3. Merge the new categorization
@@ -108,6 +123,7 @@ export class JobAppWebCatService {
       for (const url of urls) {
         if (!final[category].includes(url)) {
           final[category].push(url);
+          console.log(`✅ [Added] "${url}" to "${category}"`);
         }
       }
     }
@@ -118,6 +134,7 @@ export class JobAppWebCatService {
 
     console.log('🏁 [Done] Categorization and update complete.\n');
   }
+
   async processCuratedWebsite() {
     console.log('\n🔍 [Start] Processing one uncurated website...\n');
 
@@ -305,11 +322,12 @@ export class JobAppWebCatService {
     //TODO check with llm
     const url = `https://play.google.com/store/apps/details?id=${packname.replace(/_/g, '.')}&hl=FR&gl=US`;
     const content = await this.scrapper.getWebsite(url);
+    if (!content) return null;
     const category = await this.llm.getAppCategory(packname, content);
     if (category !== 'unknown') {
       return category;
     }
-    return false;
+    return null;
     try {
       const $ = cheerio.load((await lastValueFrom(this.http.get(url))).data);
       const app_title = $('h1[itemprop="name"]').text().trim();
