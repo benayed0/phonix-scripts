@@ -16,6 +16,12 @@ export class JobAppWebCatService {
   ) {}
   async processWebsite(url: string) {
     try {
+      const alreadyCategorized = await this.firebase.WebsiteCategorized(url);
+      if (alreadyCategorized) {
+        console.log('Website already categorized:', url);
+
+        return { success: true, message: 'Website already categorized' };
+      }
       const category = await this.getWebsiteCategory(url);
       await this.appendWebsite(url, category);
       return { success: true };

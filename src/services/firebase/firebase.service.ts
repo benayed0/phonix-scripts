@@ -16,6 +16,22 @@ export class FirebaseService {
   getRef(path: string) {
     return this.#rtdb.ref(path);
   }
+  WebsiteCategorized(url: string): Promise<boolean> {
+    return this.#rtdb
+      .ref(this.curatedWebsitesPath)
+      .once('value')
+      .then((snapshot) => {
+        const categories: { [category: string]: string[] } =
+          snapshot.val() || {};
+        for (const category of Object.keys(categories)) {
+          const websites = categories[category];
+          if (Array.isArray(websites) && websites.includes(url)) {
+            return true;
+          }
+        }
+        return false;
+      });
+  }
   async removeWebsitesFromFirestore(urls: string[]): Promise<void> {
     if (!urls.length) return;
 
