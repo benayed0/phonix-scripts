@@ -43,6 +43,10 @@ export class ScraperService {
           return;
         }
         try {
+          if (!stdout || !stdout.trim().startsWith('{')) {
+            console.error('Invalid stdout:', stdout);
+            return resolve(null);
+          }
           const json = JSON.parse(stdout);
           resolve(json.content);
         } catch (err) {

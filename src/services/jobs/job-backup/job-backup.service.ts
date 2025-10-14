@@ -26,9 +26,7 @@ export class JobBackupService {
 
     @InjectModel(User.name)
     private user: Model<User>,
-  ) {
-    console.log(this.localeLogs);
-  }
+  ) {}
   async downloadFirebaseAndMongo() {
     let errors = false;
     let data;

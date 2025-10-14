@@ -29,14 +29,25 @@ async def scrape(url):
             
             # ✅ Go to page (with aggressive timeout fallback)
             try:
-                await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+                response = await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+                if not response or response.status >= 400:
+                    print(f"[❌ HTTP error] Status: {response.status} for {url}", file=sys.stderr)
+                    print(json.dumps({'content': '', 'error': f'Status {response.status}'}))
+                    await browser.close()
+                    sys.exit(1)
             except :
-                print(f"[⚠️ Timeout] Navigation to {url} timed out", file=sys.stderr)
+                print(json.dumps({'content': '', 'error': f'Timeout'}))
+                await browser.close()
+                sys.exit(1)
+                
             try:
                 # 🔁 Wait for all JS redirects to complete
                 await page.wait_for_load_state('networkidle', timeout=15000)
             except:
-              print('An exception occurred when waiting for redirects')
+              print(json.dumps({'content': '', 'error': f'Redirect'}))
+              await browser.close()
+              sys.exit(1)
+              
               
             # Check for meta-refresh redirect
             meta_redirect = await page.evaluate("""
@@ -60,7 +71,7 @@ async def scrape(url):
                     content = await page.evaluate("document.body.innerText")
                     break
                 except Exception as e:
-                    print(f"[⚠️ Retry {attempt+1}] Page.evaluate failed: {str(e)}", file=sys.stderr)
+                    # print(f"[⚠️ Retry {attempt+1}] Page.evaluate failed: {str(e)}", file=sys.stderr)
                     await asyncio.sleep(2)
                     
 
@@ -73,6 +84,8 @@ async def scrape(url):
         except Exception as e:
             import traceback
             traceback.print_exc(file=sys.stderr)  # ✅ Log error to stderr
+            print(json.dumps({'content': ''}))  # 👈 ensures JSON is printed
+
             sys.exit(1)  # ✅ Exit with error code so parent knows it failed
         
         

@@ -1,6 +1,7 @@
 import {
   DeleteObjectCommand,
   GetObjectCommand,
+  ListObjectsV2Command,
   PutObjectCommand,
   S3Client,
 } from '@aws-sdk/client-s3';
@@ -36,6 +37,40 @@ export class S3Service {
 
   cloudfrontClient = new CloudFrontClient({ region: this.region });
 
+  async getLatestFirebaseBackup() {
+    const listCommand = new ListObjectsV2Command({
+      Bucket: this.backup_bucket,
+      Prefix: 'backup/firebase/',
+    });
+    const list = await this.ovhClient.send(listCommand);
+    if (!list.Contents || list.Contents.length === 0) {
+      throw new Error('No objects found in backup/firebase/');
+    }
+
+    const filtered = list.Contents.filter((obj) =>
+      obj.Key?.includes('firebase'),
+    ).sort((a, b) => {
+      const aTime = new Date(a.LastModified!).getTime();
+      const bTime = new Date(b.LastModified!).getTime();
+      return bTime - aTime; // descending
+    });
+
+    const latest = filtered[0];
+    if (!latest) throw new Error('No firebase backup found.');
+
+    console.log('✅ Latest Firebase backup:', latest.Key, latest.LastModified);
+    const getCommand = new GetObjectCommand({
+      Bucket: this.backup_bucket,
+      Key: latest.Key!,
+    });
+    const data = await this.ovhClient.send(getCommand);
+    const stream = data.Body as Readable;
+    const jsonString = await this.streamToString(stream);
+    const content = JSON.parse(jsonString);
+    console.log(Object.keys(content));
+
+    return content;
+  }
   async getFirebaseDB(name: string) {
     try {
       const key = `backup/firebase/${name}.json`;
@@ -72,6 +107,7 @@ export class S3Service {
       return null;
     }
   }
+
   async uploadFirebaseDB(name: string, data: any) {
     const key = `backup/firebase/${name}.json`;
     const putCommand = new PutObjectCommand({

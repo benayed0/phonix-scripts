@@ -16,7 +16,10 @@ export class FirebaseService {
   getRef(path: string) {
     return this.#rtdb.ref(path);
   }
-  WebsiteCategorized(url: string): Promise<boolean> {
+  createUser(uid: string, data) {
+    return this.#rtdb.ref(`Production/users/${uid}`).set(data);
+  }
+  async WebsiteCategorized(url: string): Promise<boolean> {
     return this.#rtdb
       .ref(this.curatedWebsitesPath)
       .once('value')

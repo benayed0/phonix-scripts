@@ -5,6 +5,7 @@ import { ScraperService } from 'src/services/scraper/scraper.service';
 import * as cheerio from 'cheerio';
 import { HttpService } from '@nestjs/axios';
 import { lastValueFrom } from 'rxjs';
+import { S3Service } from 'src/services/s3/s3.service';
 
 @Injectable()
 export class JobAppWebCatService {
@@ -13,7 +14,26 @@ export class JobAppWebCatService {
     private scrapper: ScraperService,
     private llm: LlmService,
     private http: HttpService,
+    private s3: S3Service,
   ) {}
+  // // // await this.firebase.createUser(uid, localUsers[uid]);
+
+  async rollBackUsers() {
+    const backupUsers = await this.s3.getLatestFirebaseBackup();
+    const localUsers = backupUsers.users;
+    console.log(Object.keys(localUsers).length);
+    const firebaseUsers = await this.firebase
+      .getRef('Production/users/')
+      .once('value');
+    console.log(Object.keys(firebaseUsers.val()).length);
+    for (const uid in localUsers) {
+      if (!firebaseUsers.val()[uid]) {
+        console.log('Creating user:', uid);
+      } else {
+        console.log('User exists:', uid);
+      }
+    }
+  }
   async processWebsite(url: string) {
     try {
       const alreadyCategorized = await this.firebase.WebsiteCategorized(url);
